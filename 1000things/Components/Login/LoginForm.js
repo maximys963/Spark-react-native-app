@@ -16,8 +16,8 @@ export default class myapp extends Component{
         placeholderTextColor = 'rgba(255,255,255, 0.8)'
       style={styles.input}
        />
-     <TouchableOpacity >
-       <Text color="rgba(255,255,255, 0.9)">Login</Text>
+     <TouchableOpacity style ={styles.buttonContainer} >
+       <Text style={styles.buttonText}>Login</Text>
      </TouchableOpacity>
 
 
@@ -28,12 +28,23 @@ export default class myapp extends Component{
 }
 const styles  = StyleSheet.create({
 container:{
-padding: 20
+paddingHorizontal: 20,
+marginBottom:100
+
+
 },
 input:{
   height: 40,
   marginBottom: 10,
 
+
+},
+buttonContainer:{
+
+},
+buttonText:{
+textAlign: 'center',
+color: 'rgba(255,255,255,0.9)'
 }
 
 

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {AppRegistry, Text, View, StyleSheet, Image} from 'react-native';
+import LoginForm from './LoginForm'
 
 export default class myapp extends Component{
   render(){
@@ -11,9 +12,9 @@ export default class myapp extends Component{
             source={require('../../logo/network.png')}
             />
         </View>
-        <View style={styles.formContainer}></View>
-
-
+        <View style={styles.formContainer}>
+          <LoginForm/>
+        </View>
       </View>
     );
   }

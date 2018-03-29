@@ -9,7 +9,7 @@ export default class myapp extends Component{
         <View style={styles.logoContainer}>
           <Image
             style={styles.logo}
-            source={require('../../logo/network.png')}
+            source={require('../../logo/world.png')}
             />
         </View>
         <View style={styles.formContainer}>
@@ -22,7 +22,7 @@ export default class myapp extends Component{
 const styles  = StyleSheet.create({
   container:{
     flex: 1,
-    backgroundColor: '#2ecc71'
+    backgroundColor: '#ecf0f1'
   },
   logoContainer:{
     alignItems: 'center',

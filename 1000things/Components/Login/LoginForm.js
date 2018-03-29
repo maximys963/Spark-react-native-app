@@ -13,6 +13,7 @@ export default class myapp extends Component{
         />
       <TextInput
         placeholder="password"
+        secureTextEntry
         placeholderTextColor = 'rgba(255,255,255, 0.8)'
       style={styles.input}
        />

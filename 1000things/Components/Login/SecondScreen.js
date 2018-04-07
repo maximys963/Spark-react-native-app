@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {AppRegistry, Text, View, StyleSheet, Image, KeyboardAvoidingView} from 'react-native';
+import {AppRegistry, Text, View, StyleSheet, Image, Button, KeyboardAvoidingView} from 'react-native';
 
 
 export default class Second extends Component{
@@ -8,6 +8,13 @@ export default class Second extends Component{
 
         <View style={styles.logoContainer}>
         <Text>Hello World !</Text>
+          <Button style ={styles.buttonText}
+
+            title="Go Login"
+            color="#2ecc71"
+            accessibilityLabel="Learn more about this purple button"
+            />
+
         </View>
 
     );

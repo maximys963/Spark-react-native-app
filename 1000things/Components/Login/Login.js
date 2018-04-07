@@ -6,8 +6,12 @@ import {StackNavigator} from 'react-navigation';
 
 
 
-export default class myapp extends Component{
+export default class Login extends Component{
+  static navigationOption= {
+    title: "Login",
+  };
   render(){
+  var {navigate} = this.props.navigation;
     return(
       <KeyboardAvoidingView behavior="padding" style={styles.container}>
         <View style={styles.logoContainer}>
@@ -36,6 +40,9 @@ export default class myapp extends Component{
           style={styles.input}
            />
          <Button style ={styles.buttonText}
+           onPress={
+             ()=> navigate("Second",{})
+           }
            title="Login"
            color="#2ecc71"
            accessibilityLabel="Learn more about this purple button"
@@ -49,7 +56,14 @@ export default class myapp extends Component{
       </KeyboardAvoidingView>
     );
   }
+
 }
+//  StackNavigator({
+//   Login: {
+//     screen: Login,
+//   },
+// });
+
 const styles  = StyleSheet.create({
   container:{
     flex: 1,

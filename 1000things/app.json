@@ -1,5 +1,15 @@
 {
-  "expo": {
-    "sdkVersion": "25.0.0"
-  }
-}
+   "expo": {
+    "name": "ThousandThings",
+    "icon": "./atom.png",
+    "version": "1.0.0",
+    "slug": "your-app-slug",
+    "sdkVersion": "25.0.0",
+    "ios": {
+      "bundleIdentifier": "com.amovteam.maxon"
+    },
+    "android": {
+      "package": "com.amovteam.maxon"
+    }
+   }
+ }

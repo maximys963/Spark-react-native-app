@@ -22,7 +22,7 @@ export default class Login extends Component{
         </View>
         <View style={styles.formContainer}>
 
-          <View style={styles.container}>
+
           <TextInput
             placeholderTextColor = 'rgba(255,255,255, 0.9)'
             placeholder="email or username"
@@ -47,11 +47,6 @@ export default class Login extends Component{
            color="#2ecc71"
            accessibilityLabel="Learn more about this purple button"
            />
-
-
-
-
-          </View>
         </View>
       </KeyboardAvoidingView>
     );
@@ -67,7 +62,9 @@ export default class Login extends Component{
 const styles  = StyleSheet.create({
   container:{
     flex: 1,
-    backgroundColor: '#ecf0f1'
+    backgroundColor: '#ecf0f1',
+    paddingHorizontal: 20,
+    marginBottom:120
   },
   logoContainer:{
     alignItems: 'center',
@@ -78,12 +75,6 @@ const styles  = StyleSheet.create({
     width: 100,
     height: 100
   },
-  container:{
-  paddingHorizontal: 20,
-  marginBottom:120
-
-
-  },
   input:{
     height: 40,
     marginBottom: 10,
@@ -93,7 +84,8 @@ const styles  = StyleSheet.create({
 
 
   },
-  buttonContainer:{
+  formContainer:{
+
 
   },
   buttonText:{

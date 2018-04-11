@@ -3,8 +3,32 @@ import {AppRegistry, Text, View, StyleSheet, Image} from 'react-native';
 import { Constants } from 'expo';
 import Button  from "apsl-react-native-button";
 
+// class Buttons extends Component{
+//   constructor(props){
+//     super(props)
+//     render(){
+//       return(
+//
+//
+//       )
+//     }
+//   }
+// }
+
 
 export default class Second extends Component{
+  constructor(props){
+    super(props);
+    this.ColorChange = this.ColorChange.bind(this);
+    this.state = {isClicked: false};
+}
+     ColorChange(){
+      this.setState({
+        isClicked: !this.state.isClicked
+      });
+    }
+
+
   render(){
     return(
 
@@ -12,19 +36,16 @@ export default class Second extends Component{
           <Text style={styles.titileText}>Виберіть пріорітетність діяльності</Text>
 
           <Button
-            style={styles.buttonSt}
-
-
-
+            textStyle={{color:"white"}}
+            onPress={this.ColorChange}
+            style={this.state.isClicked ?{backgroundColor:"#e74c3c"}:{backgroundColor:"#bdc3c7"}}
 
             accessibilityLabel="Learn more about this purple button"
-
-
-
             >Спорт</Button>
 
             <Button
               style={styles.buttonSt}
+              textStyle={{color:"white"}}
 
 
 
@@ -32,6 +53,7 @@ export default class Second extends Component{
               >Творчість</Button>
               <Button
                 style={styles.buttonSt}
+                textStyle={{color:"white"}}
 
 
 
@@ -39,12 +61,13 @@ export default class Second extends Component{
                 >Соціальне</Button>
                 <Button
                   style={styles.buttonSt}
+                  textStyle={{color:"white"}}
 
 
 
-  color= "white"
+
                   accessibilityLabel="Learn more about this purple button"
-                  >123</Button>
+                  >Відпочинок</Button>
 
         </View>
 
@@ -67,7 +90,6 @@ const styles  = StyleSheet.create({
     justifyContent: 'center'
   },
   buttonSt:{
-    backgroundColor:"#bdc3c7",
     marginBottom:20,
     height: 60,
     width: 280,
@@ -85,3 +107,25 @@ const styles  = StyleSheet.create({
 
 
 });
+
+//
+// class Blink extends Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {isShowingText: true};
+//
+//     // Toggle the state every second
+//     setInterval(() => {
+//       this.setState(previousState => {
+//         return { isShowingText: !previousState.isShowingText };
+//       });
+//     }, 1000);
+//   }
+//
+//   render() {
+//     let display = this.state.isShowingText ? this.props.text : ' ';
+//     return (
+//       <Text>{display}</Text>
+//     );
+//   }
+// }

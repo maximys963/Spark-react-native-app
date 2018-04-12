@@ -59,11 +59,11 @@ export default class Second extends Component{
           <Button
             textStyle={{color:"white"}}
             onPress={this.ColorChange}
-            style={this.state.isClicked ?{backgroundColor:"#e74c3c",  marginBottom:20,
+            style={this.state.isClicked ?{backgroundColor:"#27ae60",  marginBottom:20,
               height: 60,
               width: 280,
               borderRadius: 0,
-              borderColor: "#bdc3c7",
+              borderColor: "#27ae60",
               position: "relative",
               marginLeft: 20,}
               :{backgroundColor:"#bdc3c7",  marginBottom:20,
@@ -80,11 +80,11 @@ export default class Second extends Component{
             <Button
               textStyle={{color:"white"}}
               onPress={this.ColorChange1}
-              style={this.state.isClicked1 ?{backgroundColor:"#e74c3c",  marginBottom:20,
+              style={this.state.isClicked1 ?{backgroundColor:"#27ae60",  marginBottom:20,
                 height: 60,
                 width: 280,
                 borderRadius: 0,
-                borderColor: "#bdc3c7",
+                borderColor: "#27ae60",
                 position: "relative",
                 marginLeft: 20,}
                 :{backgroundColor:"#bdc3c7",  marginBottom:20,
@@ -100,11 +100,11 @@ export default class Second extends Component{
               <Button
                 textStyle={{color:"white"}}
                 onPress={this.ColorChange2}
-                style={this.state.isClicked2 ?{backgroundColor:"#e74c3c",  marginBottom:20,
+                style={this.state.isClicked2 ?{backgroundColor:"#27ae60",  marginBottom:20,
                   height: 60,
                   width: 280,
                   borderRadius: 0,
-                  borderColor: "#bdc3c7",
+                  borderColor: "#27ae60",
                   position: "relative",
                   marginLeft: 20,}
                   :{backgroundColor:"#bdc3c7",  marginBottom:20,
@@ -120,11 +120,11 @@ export default class Second extends Component{
                 <Button
                   textStyle={{color:"white"}}
                   onPress={this.ColorChange3}
-                  style={this.state.isClicked3 ?{backgroundColor:"#e74c3c",  marginBottom:20,
+                  style={this.state.isClicked3 ?{backgroundColor:"#27ae60",  marginBottom:20,
                     height: 60,
                     width: 280,
                     borderRadius: 0,
-                    borderColor: "#bdc3c7",
+                    borderColor: "#27ae60",
                     position: "relative",
                     marginLeft: 20,}
                     :{backgroundColor:"#bdc3c7",  marginBottom:20,

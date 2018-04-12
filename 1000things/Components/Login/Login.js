@@ -64,7 +64,9 @@ const styles  = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ecf0f1',
     paddingHorizontal: 20,
-    marginBottom:120
+    flexDirection:'column',
+    justifyContent: 'flex-end',
+
   },
   logoContainer:{
     alignItems: 'center',
@@ -73,7 +75,8 @@ const styles  = StyleSheet.create({
   },
   logo:{
     width: 100,
-    height: 100
+    height: 100,
+    margin: 0,
   },
   input:{
     height: 40,
@@ -85,6 +88,7 @@ const styles  = StyleSheet.create({
 
   },
   formContainer:{
+    marginBottom:70,
 
 
   },

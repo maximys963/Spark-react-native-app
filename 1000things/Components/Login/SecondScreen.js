@@ -38,33 +38,81 @@ export default class Second extends Component{
           <Button
             textStyle={{color:"white"}}
             onPress={this.ColorChange}
-            style={this.state.isClicked ?{backgroundColor:"#e74c3c"}:{backgroundColor:"#bdc3c7"}}
+            style={this.state.isClicked ?{backgroundColor:"#e74c3c",  marginBottom:20,
+              height: 60,
+              width: 280,
+              borderRadius: 0,
+              borderColor: "#bdc3c7",
+              position: "relative",
+              marginLeft: 20,}
+              :{backgroundColor:"#bdc3c7",  marginBottom:20,
+              height: 60,
+              width: 280,
+              borderRadius: 0,
+              borderColor: "#bdc3c7",
+              position: "relative",
+              marginLeft: 20, }}
 
             accessibilityLabel="Learn more about this purple button"
             >Спорт</Button>
 
             <Button
-              style={styles.buttonSt}
               textStyle={{color:"white"}}
-
-
+              onPress={this.ColorChange}
+              style={this.state.isClicked ?{backgroundColor:"#e74c3c",  marginBottom:20,
+                height: 60,
+                width: 280,
+                borderRadius: 0,
+                borderColor: "#bdc3c7",
+                position: "relative",
+                marginLeft: 20,}
+                :{backgroundColor:"#bdc3c7",  marginBottom:20,
+                height: 60,
+                width: 280,
+                borderRadius: 0,
+                borderColor: "#bdc3c7",
+                position: "relative",
+                marginLeft: 20, }}
 
               accessibilityLabel="Learn more about this purple button"
-              >Творчість</Button>
+              >Соціальне</Button>
               <Button
-                style={styles.buttonSt}
                 textStyle={{color:"white"}}
-
-
+                onPress={this.ColorChange}
+                style={this.state.isClicked ?{backgroundColor:"#e74c3c",  marginBottom:20,
+                  height: 60,
+                  width: 280,
+                  borderRadius: 0,
+                  borderColor: "#bdc3c7",
+                  position: "relative",
+                  marginLeft: 20,}
+                  :{backgroundColor:"#bdc3c7",  marginBottom:20,
+                  height: 60,
+                  width: 280,
+                  borderRadius: 0,
+                  borderColor: "#bdc3c7",
+                  position: "relative",
+                  marginLeft: 20, }}
 
                 accessibilityLabel="Learn more about this purple button"
-                >Соціальне</Button>
+                >Творічість</Button>
                 <Button
-                  style={styles.buttonSt}
                   textStyle={{color:"white"}}
-
-
-
+                  onPress={this.ColorChange}
+                  style={this.state.isClicked ?{backgroundColor:"#e74c3c",  marginBottom:20,
+                    height: 60,
+                    width: 280,
+                    borderRadius: 0,
+                    borderColor: "#bdc3c7",
+                    position: "relative",
+                    marginLeft: 20,}
+                    :{backgroundColor:"#bdc3c7",  marginBottom:20,
+                    height: 60,
+                    width: 280,
+                    borderRadius: 0,
+                    borderColor: "#bdc3c7",
+                    position: "relative",
+                    marginLeft: 20, }}
 
                   accessibilityLabel="Learn more about this purple button"
                   >Відпочинок</Button>

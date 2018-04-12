@@ -20,13 +20,34 @@ export default class Second extends Component{
   constructor(props){
     super(props);
     this.ColorChange = this.ColorChange.bind(this);
+    this.ColorChange1 = this.ColorChange1.bind(this);
+    this.ColorChange2 = this.ColorChange2.bind(this);
+    this.ColorChange3 = this.ColorChange3.bind(this);
     this.state = {isClicked: false};
+    this.state ={isClicked1: false};
+    this.state = {isClicked2: false};
+    this.state = {isClicked3: false};
 }
      ColorChange(){
       this.setState({
         isClicked: !this.state.isClicked
       });
-    }
+    };
+    ColorChange1(){
+     this.setState({
+       isClicked1: !this.state.isClicked1
+     });
+   };
+   ColorChange2(){
+    this.setState({
+      isClicked2: !this.state.isClicked2
+    });
+  };
+  ColorChange3(){
+   this.setState({
+     isClicked3: !this.state.isClicked3
+   });
+ }
 
 
   render(){
@@ -58,8 +79,8 @@ export default class Second extends Component{
 
             <Button
               textStyle={{color:"white"}}
-              onPress={this.ColorChange}
-              style={this.state.isClicked ?{backgroundColor:"#e74c3c",  marginBottom:20,
+              onPress={this.ColorChange1}
+              style={this.state.isClicked1 ?{backgroundColor:"#e74c3c",  marginBottom:20,
                 height: 60,
                 width: 280,
                 borderRadius: 0,
@@ -78,8 +99,8 @@ export default class Second extends Component{
               >Соціальне</Button>
               <Button
                 textStyle={{color:"white"}}
-                onPress={this.ColorChange}
-                style={this.state.isClicked ?{backgroundColor:"#e74c3c",  marginBottom:20,
+                onPress={this.ColorChange2}
+                style={this.state.isClicked2 ?{backgroundColor:"#e74c3c",  marginBottom:20,
                   height: 60,
                   width: 280,
                   borderRadius: 0,
@@ -98,8 +119,8 @@ export default class Second extends Component{
                 >Творічість</Button>
                 <Button
                   textStyle={{color:"white"}}
-                  onPress={this.ColorChange}
-                  style={this.state.isClicked ?{backgroundColor:"#e74c3c",  marginBottom:20,
+                  onPress={this.ColorChange3}
+                  style={this.state.isClicked3 ?{backgroundColor:"#e74c3c",  marginBottom:20,
                     height: 60,
                     width: 280,
                     borderRadius: 0,

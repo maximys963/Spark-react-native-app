@@ -23,15 +23,29 @@ export default class Second extends Component{
     this.ColorChange1 = this.ColorChange1.bind(this);
     this.ColorChange2 = this.ColorChange2.bind(this);
     this.ColorChange3 = this.ColorChange3.bind(this);
-    this.state = {isClicked: false};
+    this.state = {isClicked: 1};
     this.state ={isClicked1: false};
     this.state = {isClicked2: false};
     this.state = {isClicked3: false};
 }
      ColorChange(){
+       if(this.state.isClicked === 1){
       this.setState({
-        isClicked: !this.state.isClicked
+         isClicked: 2
       });
+    }else if(this.state.isClicked === 2){
+      this.setState({
+       isClicked: 3
+         });
+    }else if(this.state.isClicked === 3){
+      this.setState({
+       isClicked: 4
+         });
+    }else{
+      this.setState({
+       isClicked: this.state.isClicked
+         });
+    };
     };
     ColorChange1(){
      this.setState({

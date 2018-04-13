@@ -47,6 +47,7 @@ export default class Login extends Component{
            color="#2ecc71"
            accessibilityLabel="Learn more about this purple button"
            />
+
         </View>
       </KeyboardAvoidingView>
     );

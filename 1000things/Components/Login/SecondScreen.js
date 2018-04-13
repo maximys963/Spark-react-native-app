@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {AppRegistry, Text, View, StyleSheet, Image} from 'react-native';
 import { Constants } from 'expo';
 import Button  from "apsl-react-native-button";
+import Profile from '../Profile/Profile'
 
 // class Buttons extends Component{
 //   constructor(props){
@@ -65,6 +66,7 @@ export default class Second extends Component{
 
 
   render(){
+    var {navigate} = this.props.navigation;
     return(
 
         <View style={styles.container}>
@@ -151,6 +153,23 @@ export default class Second extends Component{
 
                   accessibilityLabel="Learn more about this purple button"
                   >Відпочинок</Button>
+                  <Button
+                    title="Go to profile"
+                    style={{
+                      height:30,
+                      width:60,
+                      borderColor: "#9b59b6",
+                      backgroundColor:"#9b59b6",
+                      marginLeft:220,
+
+                    }}
+                    textStyle={{color:"white"}}
+                    onPress={
+                       ()=> navigate("Third",{})
+                    }
+
+
+                    />
 
         </View>
 

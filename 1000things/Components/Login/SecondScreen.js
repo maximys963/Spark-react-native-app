@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {AppRegistry, Text, View, StyleSheet, Image} from 'react-native';
+import {AppRegistry, Text, View, StyleSheet, Image, Button} from 'react-native';
 import { Constants } from 'expo';
-import Button  from "apsl-react-native-button";
-import Profile from '../Profile/Profile'
+import ButtonR  from "apsl-react-native-button";
+import Profile from '../Profile/Profile';
+import {YellowBox} from 'react-native';
 
 // class Buttons extends Component{
 //   constructor(props){
@@ -24,17 +25,21 @@ export default class Second extends Component{
     this.ColorChange1 = this.ColorChange1.bind(this);
     this.ColorChange2 = this.ColorChange2.bind(this);
     this.ColorChange3 = this.ColorChange3.bind(this);
-    this.state = {isClicked: 1};
-    this.state ={isClicked1: false};
-    this.state = {isClicked2: false};
-    this.state = {isClicked3: false};
+    this.state =
+     {isClicked: 1,
+      isClicked1: false,
+      isClicked2: false,
+      isClicked3: false,
+     };
 }
      ColorChange(){
-       if(this.state.isClicked === 1){
+
+if(this.state.isClicked === 1){
       this.setState({
          isClicked: 2
       });
-    }else if(this.state.isClicked === 2){
+}
+    else if(this.state.isClicked === 2){
       this.setState({
        isClicked: 3
          });
@@ -64,6 +69,59 @@ export default class Second extends Component{
    });
  }
 
+ColorShade(isClicked){
+   if(isClicked === 1){
+     return{
+       backgroundColor:"#8e44ad",
+       marginBottom:20,
+         height: 60,
+         width: 280,
+         borderRadius: 0,
+         borderColor: "#27ae60",
+         position: "relative",
+         marginLeft: 20,
+
+     }
+   }else if (isClicked === 2 ){
+     return{
+       backgroundColor:"#2980b9",
+       marginBottom:20,
+         height: 60,
+         width: 280,
+         borderRadius: 0,
+         borderColor: "#27ae60",
+         position: "relative",
+         marginLeft: 20,
+
+     }
+   }else if(isClicked === 3){
+     return{
+       backgroundColor:"#e74c3c",
+        marginBottom:20,
+         height: 60,
+         width: 280,
+         borderRadius: 0,
+         borderColor: "#2c3e50",
+         position: "relative",
+         marginLeft: 20
+
+     }
+   }else {
+     return{
+       backgroundColor:"#bdc3c7",
+       marginBottom:20,
+         height: 60,
+         width: 280,
+         borderRadius: 0,
+         borderColor: "#bdc3c7",
+         position: "relative",
+         marginLeft: 20
+
+     }
+   }
+
+ }
+
 
   render(){
     var {navigate} = this.props.navigation;
@@ -72,28 +130,15 @@ export default class Second extends Component{
         <View style={styles.container}>
           <Text style={styles.titileText}>Виберіть пріорітетність діяльності</Text>
 
-          <Button
+          <ButtonR
             textStyle={{color:"white"}}
             onPress={this.ColorChange}
-            style={this.state.isClicked ?{backgroundColor:"#27ae60",  marginBottom:20,
-              height: 60,
-              width: 280,
-              borderRadius: 0,
-              borderColor: "#27ae60",
-              position: "relative",
-              marginLeft: 20,}
-              :{backgroundColor:"#bdc3c7",  marginBottom:20,
-              height: 60,
-              width: 280,
-              borderRadius: 0,
-              borderColor: "#bdc3c7",
-              position: "relative",
-              marginLeft: 20, }}
+            style={this.ColorShade(this.state.isClicked)}
 
             accessibilityLabel="Learn more about this purple button"
-            >Спорт</Button>
+            >Спорт</ButtonR>
 
-            <Button
+          <ButtonR
               textStyle={{color:"white"}}
               onPress={this.ColorChange1}
               style={this.state.isClicked1 ?{backgroundColor:"#27ae60",  marginBottom:20,
@@ -112,8 +157,8 @@ export default class Second extends Component{
                 marginLeft: 20, }}
 
               accessibilityLabel="Learn more about this purple button"
-              >Соціальне</Button>
-              <Button
+              >Соціальне</ButtonR>
+            <ButtonR
                 textStyle={{color:"white"}}
                 onPress={this.ColorChange2}
                 style={this.state.isClicked2 ?{backgroundColor:"#27ae60",  marginBottom:20,
@@ -132,8 +177,8 @@ export default class Second extends Component{
                   marginLeft: 20, }}
 
                 accessibilityLabel="Learn more about this purple button"
-                >Творічість</Button>
-                <Button
+                >Творічість</ButtonR>
+              <ButtonR
                   textStyle={{color:"white"}}
                   onPress={this.ColorChange3}
                   style={this.state.isClicked3 ?{backgroundColor:"#27ae60",  marginBottom:20,
@@ -152,24 +197,15 @@ export default class Second extends Component{
                     marginLeft: 20, }}
 
                   accessibilityLabel="Learn more about this purple button"
-                  >Відпочинок</Button>
+                  >Відпочинок</ButtonR>
                   <Button
-                    title="Go to profile"
-                    style={{
-                      height:30,
-                      width:60,
-                      borderColor: "#9b59b6",
-                      backgroundColor:"#9b59b6",
-                      marginLeft:220,
+                    title="Go to Profile"
+                    color="#2ecc71"
+                    accessibilityLabel="Learn more about this purple button"
 
-                    }}
-                    textStyle={{color:"white"}}
                     onPress={
                        ()=> navigate("Third",{})
-                    }
-
-
-                    />
+                    }/>
 
         </View>
 

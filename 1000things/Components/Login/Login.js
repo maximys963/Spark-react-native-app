@@ -7,8 +7,15 @@ import {StackNavigator} from 'react-navigation';
 
 
 export default class Login extends Component{
-  static navigationOption= {
+  static navigationOptions= {
     title: "Login",
+    headerStyle: {
+     backgroundColor: '#ecf0f1',
+   },
+   header: null,
+
+
+
   };
   render(){
   var {navigate} = this.props.navigation;

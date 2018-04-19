@@ -6,6 +6,16 @@ import Button  from "apsl-react-native-button";
 
 
 export default class Profile extends Component{
+  static navigationOptions= {
+    title: "Profile",
+    headerStyle: {
+     backgroundColor: '#ecf0f1',
+   },
+   header: null,
+
+
+
+  };
   constructor(props){
     super(props);
 }
@@ -13,7 +23,22 @@ export default class Profile extends Component{
     return(
 
         <View style={styles.container}>
-          <Text style={styles.titileText}>Hello Profile !</Text>
+          <Image
+            style={{
+
+              width: 120,
+              height: 120,
+            }}
+            source={require('../../logo/user.png')}
+
+            ></Image>
+          <Text>Lorem ipsum dolor</Text>
+
+          <View style={styles.menuBar}>
+              <View style={styles.menuButton}/>
+              <View  style={styles.menuButton}/>
+              <View  style={styles.menuButton}/>
+          </View>
         </View>
 
     );
@@ -22,33 +47,26 @@ export default class Profile extends Component{
 const styles  = StyleSheet.create({
 
   container:{
+flex:1,
     backgroundColor: '#ecf0f1',
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
+    paddingHorizontal: 20,
     flexDirection: 'column',
+   justifyContent: 'space-between',
 
   },
-  logoContainer:{
-    alignItems: 'center',
-    flexGrow: 1,
-    justifyContent: 'center'
+  menuBar:{
+    flex:1,
+    flexDirection: 'row',
   },
-  buttonSt:{
-    marginBottom:20,
-    height: 60,
-    width: 280,
-    borderRadius: 0,
-    borderColor: "#bdc3c7",
-    position: "relative",
-    marginLeft: 20,
+  menuButton:{
+     borderRadius: 0,
+     width:110,
+     height:60,
+     backgroundColor: 'gray'
+
 
   },
-  titileText:{
-    marginBottom: 20,
-    marginTop: 20,
 
-  }
 
 
 });

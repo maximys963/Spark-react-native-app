@@ -16,6 +16,7 @@ export default class Profile extends Component{
     super(props);
 }
   render(){
+      var {navigate} = this.props.navigation;
     return(
 
       <View style={styles.container}>
@@ -37,19 +38,34 @@ export default class Profile extends Component{
                 >"Lorem ipsum dolor"</Text>
                <ButtonR style={styles.mainButton}
                  textStyle={{color:"white"}}
+
                  >Take task</ButtonR>
                 <View style={styles.menuBar}>
                 <View style={styles.menuButton1}>
                   <Text style={{alignSelf:'center'}}>5</Text>
-                  <Text style={{alignSelf:'center'}}>achives</Text>
+                  <Text style={{alignSelf:'center'}}
+
+                    onPress={
+                      ()=> navigate("Achiv",{})
+                    }
+                    >achives</Text>
                 </View>
                 <View  style={styles.menuButton2}>
                   <Text style={{alignSelf:'center'}}>4</Text>
-                  <Text style={{alignSelf:'center'}}>publication</Text>
+                  <Text style={{alignSelf:'center'}}
+                    onPress={
+                      ()=> navigate("DoePublications",{})
+                    }
+                    >publication</Text>
                 </View>
                 <View  style={styles.menuButton3}>
                 <Text style={{alignSelf:'center'}}>5</Text>
-                <Text style={{alignSelf:'center'}}>followers</Text>
+                <Text style={{alignSelf:'center'}}
+                  onPress={
+                    ()=> navigate("DoeFollowers",{})
+                  }
+
+                  >followers</Text>
             </View>
             </View>
 

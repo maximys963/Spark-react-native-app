@@ -140,7 +140,8 @@ ColorShade(isClicked){
          borderRadius: 0,
          borderColor: "#bdc3c7",
          position: "relative",
-         marginLeft: 20,
+         alignSelf: 'center'
+
 
      }
    }else if (isClicked === 2 ){
@@ -152,7 +153,8 @@ ColorShade(isClicked){
          borderRadius: 0,
          borderColor: "rgba(39, 174, 96,0.3)",
          position: "relative",
-         marginLeft: 20,
+        alignSelf: 'center'
+
 
      }
    }else if(isClicked === 3){
@@ -164,7 +166,8 @@ ColorShade(isClicked){
          borderRadius: 0,
          borderColor: "rgba(39, 174, 96,0.5)",
          position: "relative",
-         marginLeft: 20
+        alignSelf: 'center'
+
 
      }
    }else if(isClicked === 4){
@@ -176,7 +179,8 @@ ColorShade(isClicked){
          borderRadius: 0,
          borderColor: "rgba(39, 174, 96,0.8)",
          position: "relative",
-         marginLeft: 20
+         alignSelf: 'center'
+
 
      }
    }else {
@@ -188,7 +192,8 @@ ColorShade(isClicked){
          borderRadius: 0,
          borderColor: "rgba(39, 174, 96,1.0)",
          position: "relative",
-         marginLeft: 20
+         alignSelf: 'center'
+
 
      }
    }

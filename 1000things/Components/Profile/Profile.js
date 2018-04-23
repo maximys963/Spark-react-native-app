@@ -38,6 +38,9 @@ export default class Profile extends Component{
                 >"Lorem ipsum dolor"</Text>
                <ButtonR style={styles.mainButton}
                  textStyle={{color:"white"}}
+                 onPress={
+                   ()=> navigate("TaskPage",{})
+                 }
 
                  >Take task</ButtonR>
                 <View style={styles.menuBar}>

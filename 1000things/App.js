@@ -6,12 +6,16 @@ import Profile from "./Components/Profile/Profile";
 import Achives from "./Components/Achives/Achives";
 import DoePub from "./Components/Publications/DoePub";
 import DoeFol from "./Components/Followers/DoeFollow";
-import Intro from "./Components/Login/Intro";
+import Screen from "./Components/Login/app/components/Screen.js";
+import Swiper from "./Components/Login/app/components/Swiper.js";
+import Boiler from "./Components/Login/app/components/Boiler.js";
 import Tasks from "./Components/Tasks/Tasks";
 import {StackNavigator} from 'react-navigation';
 
 const Navigation = StackNavigator({
-  Zero: {screen: Intro},
+  Zero: {screen: Screen},
+  ZeroOne: {screen: Swiper},
+  ZeroTwo: {screen: Boiler},
   First: {screen: Login},
   Second: {screen: Second},
   Third: {screen: Profile},

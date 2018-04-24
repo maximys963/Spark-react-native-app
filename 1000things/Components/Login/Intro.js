@@ -1,81 +1,80 @@
-import React, {Component} from 'react';
-import {AppRegistry, Text, Button, TextInput, View, StyleSheet, Image, KeyboardAvoidingView} from 'react-native';
-import LoginForm from './LoginForm'
-import {StackNavigator} from 'react-navigation';
+import React, { Component } from "react";
+import { Platform, StyleSheet, StatusBar, Text, View } from "react-native";
+import { StackNavigator } from "react-navigation";
+
+import Screen from "./app/components/Screen";
+import Swiper from "./app/components/Swiper";
+import Boiler from "./app/components/Boiler";
 
 
 
 
 export default class Intro extends Component{
-  static navigationOptions= {
-    title: "Intro",
+  static navigationOptions = {
     headerStyle: {
-     backgroundColor: '#ecf0f1',
-   },
-   header: null,
-
-
-
+      backgroundColor: "#16a085",
+      elevation: null
+    },
+    header: null
   };
-  render(){
-  var {navigate} = this.props.navigation;
-    return(
+  render() {
+    return (
       <View style={styles.container}>
-      <Button style ={styles.buttonText}
-        onPress={
-          ()=> navigate("First",{})
-        }
-        title="Sign in"
-        color="#2ecc71"
-        accessibilityLabel="Learn more about this purple button"
-        />
-
+        <StatusBar barStyle="light-content" backgroundColor="#16a085" />
+        <Screen navigation={this.props.navigation} />
       </View>
     );
   }
 
 }
+
+export default App = StackNavigator({
+  Home: {
+    screen: Home,
+    navigationOptions: {
+      title: "Home"
+    }
+  },
+  Screen: {
+    screen: Screen,
+    navigationOptions: {
+      title: "Screen"
+    }
+  },
+  Swiper: {
+    screen: Swiper,
+    navigationOptions: {
+      title: "Swiper"
+    }
+  },
+  Boiler: {
+    screen: Boiler,
+    navigationOptions: {
+      title: "Boiler"
+    }
+  }
+});
 //  StackNavigator({
 //   Login: {
 //     screen: Login,
 //   },
 // });
 
-const styles  = StyleSheet.create({
-  container:{
+const styles = StyleSheet.create({
+  container: {
     flex: 1,
-    backgroundColor: '#ecf0f1',
-    paddingHorizontal: 20,
-    flexDirection:'column',
-    justifyContent: 'center',
-
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#F5FCFF"
   },
-  logoContainer:{
-    alignItems: 'center',
-    flexGrow: 1,
-    justifyContent: 'center'
+  welcome: {
+    fontSize: 20,
+    textAlign: "center",
+    margin: 10
   },
-  logo:{
-    width: 100,
-    height: 100,
-    margin: 0,
-  },
-  input:{
-    height: 40,
-    marginBottom: 10,
-    backgroundColor: 'rgba(46, 204, 113, 0.5)',
-    paddingLeft: 5
-
-
-
-  },
-  formContainer:{
-    marginBottom:70,
-
-
-  },
-  buttonText:{
-  textAlign: 'center',
+  instructions: {
+    textAlign: "center",
+    color: "#333333",
+    marginBottom: 5
   }
-
 });

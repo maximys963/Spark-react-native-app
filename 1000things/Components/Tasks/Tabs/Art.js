@@ -75,10 +75,12 @@ export default class Art extends Component{
 
       <View style={styles.container}>
       <FlatList
+
         data={artTasks}
         renderItem={
-          ({item})=> <Text style={{padding: 10, fontSize:18, height: 44, backgroundColor: '#55efc4', color:"white" }} >{item.key}  time={item.time} {item.done ?  'yes' : 'no'}</Text>
+          ({item})=> <Text style={{ padding: 10, fontSize:18, height: 44, backgroundColor: '#55efc4', color:"white" }} >{item.key}  time={item.time} {item.done ?  'yes' : 'no'}</Text>
         }
+        
 
         ></FlatList>
       </View>
@@ -88,6 +90,9 @@ export default class Art extends Component{
 }
 const styles  = StyleSheet.create({
 
+constainer:{
+  flex: 1
+}
 
 
 

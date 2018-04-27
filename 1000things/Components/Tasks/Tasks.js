@@ -16,9 +16,8 @@ const initialLayout = {
 
 const FirstRoute = () => <Art style={[ styles.container, { backgroundColor: '#ff4081' } ]} />;
 const SecondRoute = () => <Rest style={[ styles.container, { backgroundColor: '#673ab7' } ]} />;
-const ThirdRoute = () => <Social style={[ styles.container, { backgroundColor: '#673ab7' } ]} />;
+const ThirdRoute = () => <Social style={[ styles.container, { backgroundColor: '#ff4081' } ]} />;
 const FouthRoute = () => <Sport style={[ styles.container, { backgroundColor: '#673ab7' } ]} />;
-
 
 
 export default class DoePub extends Component{
@@ -60,7 +59,5 @@ const styles  = StyleSheet.create({
   container: {
      flex: 1,
    },
-
-
-
+   
 });

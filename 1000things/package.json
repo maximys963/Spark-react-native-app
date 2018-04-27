@@ -23,6 +23,8 @@
     "expo": "^25.0.0",
     "react": "16.2.0",
     "react-native": "0.52.0",
+    "react-native-gesture-handler": "^1.0.0-alpha.43",
+    "react-native-tab-view": "^0.0.77",
     "react-navigate": "^0.6.0",
     "react-navigation": "^1.5.11"
   }

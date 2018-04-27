@@ -97,9 +97,10 @@ const styles  = StyleSheet.create({
      height:60,
      borderStyle: 'solid',
      borderWidth: 1,
-    marginRight: -2,
+    marginRight: -1,
    justifyContent: 'center',
       flexDirection:'column',
+  
  },
 
 menuButton2:{
@@ -122,6 +123,7 @@ menuButton2:{
   marginLeft: -1,
    justifyContent: 'center',
    flexDirection:'column',
+
    },
    mainButton:{
      borderRadius: 0,

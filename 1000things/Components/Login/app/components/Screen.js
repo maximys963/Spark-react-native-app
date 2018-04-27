@@ -28,20 +28,20 @@ export default class Screen extends Component {
         {/* First screen */}
         <View style={styles.slide}>
           <Icon name="ios-home" {...iconStyles} />
-          <Text style={styles.header}>one</Text>
-          <Text style={styles.text}>one</Text>
+          <Text style={styles.header}>IMB</Text>
+          <Text style={styles.text}>Forever</Text>
         </View>
         {/* Second screen */}
         <View style={styles.slide}>
           <Icon name="ios-people" {...iconStyles} />
-          <Text style={styles.header}>two</Text>
-          <Text style={styles.text}>two</Text>
+          <Text style={styles.header}>Holly</Text>
+          <Text style={styles.text}>ULM</Text>
         </View>
         {/* Third screen */}
         <View style={styles.slide}>
           <Icon name="ios-videocam" {...iconStyles} />
-          <Text style={styles.header}>three</Text>
-          <Text style={styles.text}>three</Text>
+          <Text style={styles.header}>RL</Text>
+          <Text style={styles.text}>watching you</Text>
         </View>
       </Swiper>
     );

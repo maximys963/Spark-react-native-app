@@ -9,10 +9,12 @@ import DoeFol from "./Components/Followers/DoeFollow";
 import Screen from "./Components/Login/app/components/Screen.js";
 import Swiper from "./Components/Login/app/components/Swiper.js";
 import Boiler from "./Components/Login/app/components/Boiler.js";
+import Loading from "./Components/Loading/Loading";
 import Tasks from "./Components/Tasks/Tasks";
 import {StackNavigator} from 'react-navigation';
 
 const Navigation = StackNavigator({
+  Loading: {screen: Loading},
   Zero: {screen: Screen},
   ZeroOne: {screen: Swiper},
   ZeroTwo: {screen: Boiler},

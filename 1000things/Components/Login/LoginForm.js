@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {AppRegistry, Text, View, StyleSheet, Button, Image, TextInput} from 'react-native';
+import {AppRegistry, Text, View, StyleSheet, Button, Image, TextInput, TouchableHighlight} from 'react-native';
 
 export default class myapp extends Component{
   render(){
@@ -21,6 +21,10 @@ export default class myapp extends Component{
 
       style={styles.input}
        />
+
+       <Text>New User? Sign Up</Text>
+
+
      <Button style ={styles.buttonText}
        title="Login"
        color="#2ecc71"
@@ -36,10 +40,7 @@ export default class myapp extends Component{
 }
 const styles  = StyleSheet.create({
 container:{
-paddingHorizontal: 20,
-marginBottom:120
-
-
+flex: 1
 },
 input:{
   height: 40,

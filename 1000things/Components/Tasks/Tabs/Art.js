@@ -1,27 +1,43 @@
 import React, {Component} from 'react';
-import {Alert, AppRegistry, Text, View, StyleSheet, Image, FlatList} from 'react-native';
+import{
+	AppRegistry,
+	Dimensions,
+	ListView,
+	StyleSheet,
+	Text,
+	TouchableOpacity,
+	TouchableHighlight,
+	View,
+  FlatList
+} from 'react-native';
 import { Constants } from 'expo';
 import ButtonR  from "apsl-react-native-button";
+// import ArtList from './Lists/ArtList';
+import { SwipeListView } from 'react-native-swipe-list-view';
 
 
 
 export default class Art extends Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      activeRowKey: null
-    }
-}
-_onPressListItem(){
-  Alert.alert('You tapped the item list')
-}
+  constructor(props) {
+		super(props);
+		this.ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+		this.state = {
+			listType: 'FlatList',
+			listViewData: Array(20).fill('').map((_,i) => ({key: `${i}`, text: `item #${i}`})),
+		};
+	}
 
   static navigationOptions= {
-    title: "DoePub",
+    title: "Art",
     headerStyle: {
      backgroundColor: '#ecf0f1',
    },
   };
+
+  openRow = (rowRef) => {
+   // Use an internal method to manually swipe the row open to whatever value you pass
+   rowRef.manuallySwipeRow(50);
+ }
 
   render(){
     const artTasks = [
@@ -81,17 +97,12 @@ _onPressListItem(){
 
       <View style={styles.container}>
       <FlatList
-
         data={artTasks}
         renderItem={
-          ({item})=> <Text onPress={this._onPressListItem}
-          style={{ padding: 10, fontSize:18, height: 44, backgroundColor: '#55efc4', color:"white" }} >{item.key}  time={item.time} {item.done ?  'yes' : 'no'}</Text>
+          ({item})=>
+					<Text>{item.key}</Text>
+
         }
-
-
-
-
-
         ></FlatList>
       </View>
 

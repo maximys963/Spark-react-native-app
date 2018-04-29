@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {AppRegistry, Text, Button, TextInput, View, StyleSheet, Image, KeyboardAvoidingView} from 'react-native';
+import {AppRegistry, Text, Button, TextInput, View, StyleSheet, Image, KeyboardAvoidingView, TouchableHighlight} from 'react-native';
 import LoginForm from './LoginForm'
 import {StackNavigator} from 'react-navigation';
 
@@ -46,6 +46,9 @@ export default class Login extends Component{
 
           style={styles.input}
            />
+         <TouchableHighlight>
+         <Text>New User? Sing Up</Text>
+         </TouchableHighlight>
          <Button style ={styles.buttonText}
            onPress={
              ()=> navigate("Second",{})
@@ -74,6 +77,7 @@ const styles  = StyleSheet.create({
     paddingHorizontal: 20,
     flexDirection:'column',
     justifyContent: 'flex-end',
+
 
   },
   logoContainer:{

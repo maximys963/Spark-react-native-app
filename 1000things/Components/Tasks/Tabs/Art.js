@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {AppRegistry, Text, View, StyleSheet, Image, FlatList} from 'react-native';
+import {Alert, AppRegistry, Text, View, StyleSheet, Image, FlatList} from 'react-native';
 import { Constants } from 'expo';
 import ButtonR  from "apsl-react-native-button";
 
@@ -8,6 +8,12 @@ import ButtonR  from "apsl-react-native-button";
 export default class Art extends Component{
   constructor(props){
     super(props);
+    this.state = {
+      activeRowKey: null
+    }
+}
+_onPressListItem(){
+  Alert.alert('You tapped the item list')
 }
 
   static navigationOptions= {
@@ -31,43 +37,43 @@ export default class Art extends Component{
       {key: "sleep",
       time: '10h',
       done: true},
-      {key: "sleep",
+      {key: "sleep1",
       time: '10h',
       done: true},
-      {key: "sleep",
+      {key: "sleep2",
       time: '10h',
       done: true},
-      {key: "sleep",
+      {key: "sleep3",
       time: '10h',
       done: true},
-      {key: "sleep",
+      {key: "sleep4",
       time: '10h',
       done: true},
-      {key: "sleep",
+      {key: "sleep5",
       time: '10h',
       done: true},
-      {key: "sleep",
+      {key: "sleep6",
       time: '10h',
       done: true},
-      {key: "sleep",
+      {key: "sleep7",
       time: '10h',
       done: true},
-      {key: "sleep",
+      {key: "sleep8",
       time: '10h',
       done: true},
-      {key: "sleep",
+      {key: "sleep9",
       time: '10h',
       done: true},
-      {key: "sleep",
+      {key: "sleep10",
       time: '10h',
       done: true},
-      {key: "sleep",
+      {key: "sleep11",
       time: '10h',
       done: true},
-      {key: "sleep",
+      {key: "sleep12",
       time: '10h',
       done: true},
-      {key: "sleep",
+      {key: "sleep13",
       time: '10h',
       done: true},
     ]
@@ -78,9 +84,13 @@ export default class Art extends Component{
 
         data={artTasks}
         renderItem={
-          ({item})=> <Text style={{ padding: 10, fontSize:18, height: 44, backgroundColor: '#55efc4', color:"white" }} >{item.key}  time={item.time} {item.done ?  'yes' : 'no'}</Text>
+          ({item})=> <Text onPress={this._onPressListItem}
+          style={{ padding: 10, fontSize:18, height: 44, backgroundColor: '#55efc4', color:"white" }} >{item.key}  time={item.time} {item.done ?  'yes' : 'no'}</Text>
         }
-        
+
+
+
+
 
         ></FlatList>
       </View>

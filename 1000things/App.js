@@ -14,18 +14,19 @@ import Tasks from "./Components/Tasks/Tasks";
 import {StackNavigator} from 'react-navigation';
 
 const Navigation = StackNavigator({
-  First: {screen: Login},
+
   Loading: {screen: Loading},
   Zero: {screen: Screen},
   ZeroOne: {screen: Swiper},
   ZeroTwo: {screen: Boiler},
-
+  First: {screen: Login},
   Second: {screen: Second},
   Third: {screen: Profile},
   Achiv: {screen: Achives},
   DoePublications: {screen: DoePub},
   DoeFollowers: {screen: DoeFol},
   TaskPage: {screen: Tasks},
+
 
 });
 export default Navigation;

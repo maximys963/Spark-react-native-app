@@ -12,7 +12,6 @@ import{
 } from 'react-native';
 import { Constants } from 'expo';
 import ButtonR  from "apsl-react-native-button";
-// import ArtList from './Lists/ArtList';
 import { SwipeListView } from 'react-native-swipe-list-view';
 
 
@@ -20,12 +19,31 @@ import { SwipeListView } from 'react-native-swipe-list-view';
 export default class Art extends Component{
   constructor(props) {
 		super(props);
-		this.ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-		this.state = {
-			listType: 'FlatList',
-			listViewData: Array(20).fill('').map((_,i) => ({key: `${i}`, text: `item #${i}`})),
-		};
+	 this.ColorChanger = this.ColorChanger.bind(this);
+	this.state = {
+		isTapped: false,
+	};
 	}
+
+	ColorChanger(){
+if(this.state.isTapped === false){
+	 this.setState({
+				isTapped: true
+	 })
+}else{
+	this.setState({
+			isTapped: false
+ })
+}
+};
+
+	 ColorDif(isTapped){
+		 if(isTapped === false){
+			 return{ padding: 10, fontSize:18, height: 44, backgroundColor: '#55efc4', color:"white" }
+		 }else{
+			 return{ padding: 10, fontSize:18, height: 44, backgroundColor: 'green', color:"white" }
+		 }
+	 }
 
   static navigationOptions= {
     title: "Art",
@@ -34,10 +52,7 @@ export default class Art extends Component{
    },
   };
 
-  openRow = (rowRef) => {
-   // Use an internal method to manually swipe the row open to whatever value you pass
-   rowRef.manuallySwipeRow(50);
- }
+
 
   render(){
     const artTasks = [
@@ -99,10 +114,10 @@ export default class Art extends Component{
       <FlatList
         data={artTasks}
         renderItem={
-          ({item})=>
-					<Text>{item.key}</Text>
-
-        }
+					({item})=> <Text
+					onPress={this.ColorChanger}
+         style={this.ColorDif(this.state.isTapped)} >{item.key}  time={item.time} </Text>
+         }
         ></FlatList>
       </View>
 

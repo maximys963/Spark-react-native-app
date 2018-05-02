@@ -49,13 +49,15 @@ export default class Loading extends Component{
         <View
           style={{backgroundColor: "lightgrey", width:110, height:110, alignSelf: 'center'}}
           ></View>
+        <View style={{flexDirection: 'row', justifyContent: 'center', alignItems:'center' }}>
         <Text
-          style={{fontSize: 24, marginTop: 10}}
+          style={{fontSize: 24, marginRight:-25, color: '#2d3435'}}
 
-          >Loading ...</Text>
-        <View style={{width:100, height:100}}>
+          >Loading</Text>
+        <View style={{width:100, height:100,marginRight:-25, marginBottom: -10}}>
         <LottieView source={require('./load.json')} ref={animation=>{this.animation = animation}} />
         </View>
+      </View>
       </View>
       <View
         style={{ alignItems: 'center', justifyContent: 'space-between'}}

@@ -28,6 +28,7 @@ const Navigation = StackNavigator({
   TaskPage: {screen: Tasks},
 
 
+
 });
 export default Navigation;
 // export default class myapp extends Component{

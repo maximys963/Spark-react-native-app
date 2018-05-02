@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {AppRegistry, Text, View, StyleSheet, Image, Button} from 'react-native';
+import {AppRegistry, Text, View, StyleSheet, Image, Button, Animated, Easing} from 'react-native';
 import { Constants } from 'expo';
 import ButtonR  from "apsl-react-native-button";
+import LottieView from 'lottie-react-native';
 
 
 
@@ -13,30 +14,50 @@ export default class Loading extends Component{
    },
       header: null,
   };
-  constructor(props){
-    super(props);
-}
+  constructor(props) {
+      super(props);
+      this.state = {
+        progress: new Animated.Value(0),
+      };
+    }
+
+
+
+
+
+    componentDidMount() {
+      Animated.timing(this.state.progress, {
+        toValue: 1,
+        duration: 500,
+        easing: Easing.linear,
+        loop: true,
+      }).start();
+
+ }
+
   render(){
     var {navigate} = this.props.navigation;
     return(
 
       <View style={styles.container}>
       <View>
-      <Text style={styles.text}>
-      "It matters not how strait the gate,
-      How charged with punishments the scroll,
-      I am the master of my fate:
-      I am the captain of my soul."
-      </Text>
-      <Text
-      style={{
-        fontSize: 20,
-        justifyContent: 'flex-end',
+        <View
+          style={{backgroundColor: "lightgrey", width:110, height:110, alignSelf: 'center'}}
+          ></View>
+        <Text
+          style={{fontSize: 24, marginTop: 10}}
 
-      }}
-
-      >(c)William Ernest Henley</Text>
+          >Loading ...</Text>
+        <View style={{width:100, height:100}}>
+        <LottieView source={require('./load.json')} progress={this.state.progress} style={{width: 100, height: 100}}  />
+        </View>
       </View>
+      <View
+        style={{ alignItems: 'center', justifyContent: 'space-between'}}
+        >
+      <Text style={styles.text}>
+      "Just make yourself better..."
+      </Text>
       <Button style ={styles.buttonText}
         onPress={
           ()=> navigate("Zero",{})
@@ -45,6 +66,7 @@ export default class Loading extends Component{
         color="#2ecc71"
         accessibilityLabel="Learn more about this purple button"
         />
+      </View>
       </View>
 
     );
@@ -57,9 +79,15 @@ const styles  = StyleSheet.create({
     paddingHorizontal: 20,
     flexDirection:'column',
     justifyContent: 'space-around',
+    alignItems: 'center'
+
   },
   text:{
-    fontSize: 20,
+    fontSize: 34,
+    textAlign: 'center'
+  },
+  buttonText:{
+    marginTop: 10,
   }
 
 

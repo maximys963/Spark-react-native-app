@@ -18,6 +18,11 @@
   "jest": {
     "preset": "jest-expo"
   },
+  "rnpm":{
+    "assets":[
+    "./fonts"  
+    ]
+  },
   "dependencies": {
     "apsl-react-native-button": "^3.1.0",
     "expo": "^25.0.0",

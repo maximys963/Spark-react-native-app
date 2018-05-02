@@ -26,12 +26,17 @@ export default class Loading extends Component{
 
 
     componentDidMount() {
-      Animated.timing(this.state.progress, {
-        toValue: 1,
-        duration: 500,
-        easing: Easing.linear,
-        loop: true,
-      }).start();
+      // Animated.timing(this.state.progress, {
+      //   toValue: 1,
+      //   duration: 500,
+      //   easing: Easing.linear,
+      //   loop: true,
+      // }).start();
+      this.animation.play();
+
+
+
+
 
  }
 
@@ -49,7 +54,7 @@ export default class Loading extends Component{
 
           >Loading ...</Text>
         <View style={{width:100, height:100}}>
-        <LottieView source={require('./load.json')} progress={this.state.progress} style={{width: 100, height: 100}}  />
+        <LottieView source={require('./load.json')} ref={animation=>{this.animation = animation}} />
         </View>
       </View>
       <View

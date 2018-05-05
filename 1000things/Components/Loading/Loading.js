@@ -23,20 +23,6 @@ export default class Loading extends Component{
       };
     }
 
-
-
-
-
-    // componentDidMount() {
-      // Animated.timing(this.state.progress, {
-      //   toValue: 1,
-      //   duration: 500,
-      //   easing: Easing.linear,
-      //   loop: true,
-      // }).start();
-
-      // };
-
       async componentDidMount(){
           this.animation.play();
         await Font.loadAsync({
@@ -44,13 +30,6 @@ export default class Loading extends Component{
         });
         this.setState({fontLoaded: true});
       }
-
-
-
-
-
-
-
 
   render(){
     var {navigate} = this.props.navigation;
@@ -117,9 +96,5 @@ const styles  = StyleSheet.create({
   buttonText:{
     marginTop: 10,
   }
-
-
-
-
 
 });

@@ -18,9 +18,9 @@
   "jest": {
     "preset": "jest-expo"
   },
-  "rnpm":{
-    "assets":[
-    "./fonts"  
+  "rnpm": {
+    "assets": [
+      "./fonts"
     ]
   },
   "dependencies": {
@@ -29,6 +29,7 @@
     "lottie-react-native": "2.3.2",
     "react": "16.2.0",
     "react-native": "0.52.0",
+    "react-native-elements": "^0.19.1",
     "react-native-gesture-handler": "^1.0.0-alpha.43",
     "react-native-swipe-list-view": "^1.1.0",
     "react-native-swipeout": "^2.3.3",

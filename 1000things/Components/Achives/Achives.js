@@ -19,14 +19,81 @@ export default class Achives extends Component{
     return(
 
       <View style={styles.container}>
-      <Text>This is achives page</Text>
+      <View><Text style={{fontSize:16, alignSelf: 'center'}}>Ваші досягнення</Text></View>
+      <View style={styles.rowcontainer}>
+        <View style={styles.achivcontainer}>
+          <View style={styles.acheevka}></View>
+          <Text style={styles.achText}>Lorem ipsum dolor</Text>
+        </View>
+        <View style={styles.achivcontainer}>
+          <View style={styles.acheevka}></View>
+          <Text style={styles.achText}>Lorem ipsum dolor</Text>
+        </View>
+        <View style={styles.achivcontainer}>
+          <View style={styles.acheevka}></View>
+          <Text style={styles.achText}>Lorem ipsum dolor</Text>
+        </View>
+      </View>
+      <View style={styles.rowcontainer}>
+        <View style={styles.achivcontainer}>
+          <View style={styles.acheevka}></View>
+          <Text style={styles.achText}>Lorem ipsum dolor</Text>
+        </View>
+        <View style={styles.achivcontainer}>
+          <View style={styles.acheevka}></View>
+          <Text style={styles.achText}>Lorem ipsum dolor</Text>
+        </View>
+        <View style={styles.achivcontainer}>
+          <View style={styles.acheevka}></View>
+          <Text style={styles.achText}>Lorem ipsum dolor</Text>
+        </View>
+      </View>
+      <View style={styles.rowcontainer}>
+        <View style={styles.achivcontainer}>
+          <View style={styles.acheevka}></View>
+          <Text style={styles.achText}>Lorem ipsum dolor</Text>
+        </View>
+        <View style={styles.achivcontainer}>
+          <View style={styles.acheevka}></View>
+          <Text style={styles.achText}>Lorem ipsum dolor</Text>
+        </View>
+        <View style={styles.achivcontainer}>
+          <View style={styles.acheevka}></View>
+          <Text style={styles.achText}>Lorem ipsum dolor</Text>
+        </View>
+      </View>
+
+
       </View>
 
     );
   }
 }
 const styles  = StyleSheet.create({
+container:{
+  flex:1,
+  flexDirection: 'column',
+  justifyContent: 'space-around',
+  alignContent: 'space-around',
+},
+rowcontainer:{
+  flexDirection: 'row',
+  justifyContent: 'space-around',
+},
+achivcontainer:{
+  flexDirection: 'column',
 
+},
+acheevka:{
+  backgroundColor: 'grey',
+  width: 70,
+  height: 80,
+},
+achText:{
+  width: 70,
+  height: 40,
+  fontSize: 12,
+}
 
 
 

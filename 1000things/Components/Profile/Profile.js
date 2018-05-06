@@ -11,6 +11,7 @@ export default class Profile extends Component{
     headerStyle: {
      backgroundColor: '#ecf0f1',
    },
+    header: null,
   };
   constructor(props){
     super(props);
@@ -30,6 +31,7 @@ export default class Profile extends Component{
               }}
               source={require('../../logo/user.png')}
                 />
+              <Text style={{fontSize:24}}>John Doe</Text>
               <Text
                 style={{
                   marginBottom: 20,
@@ -71,6 +73,14 @@ export default class Profile extends Component{
                   >followers</Text>
             </View>
             </View>
+            <View style={styles.storyContainer}>
+              <View style={styles.story}></View>
+              <View style={styles.story}></View>
+              <View style={styles.story}></View>
+              <View style={styles.story}></View>
+
+
+            </View>
 
       </View>
 
@@ -78,6 +88,18 @@ export default class Profile extends Component{
   }
 }
 const styles  = StyleSheet.create({
+  story:{
+    backgroundColor: 'grey',
+    width:75,
+    height: 75,
+    borderRadius: 25,
+    marginRight:3,
+  },
+  storyContainer:{
+    marginTop: 15,
+    flexDirection: 'row',
+    alignContent: 'flex-start',
+  },
 
   container:{
     flex: 1,
@@ -100,7 +122,7 @@ const styles  = StyleSheet.create({
     marginRight: -1,
    justifyContent: 'center',
       flexDirection:'column',
-  
+
  },
 
 menuButton2:{
@@ -133,9 +155,6 @@ menuButton2:{
      backgroundColor: '#27ae60',
      borderColor: '#27ae60',
      marginBottom: 20,
-
-
-
    }
 
 

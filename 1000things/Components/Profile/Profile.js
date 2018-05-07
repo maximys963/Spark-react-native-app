@@ -27,7 +27,7 @@ export default class Profile extends Component{
                 width: 120,
                 height: 120,
                 marginTop: 30,
-               marginBottom: 30,
+               marginBottom: 10,
               }}
               source={require('../../logo/user.png')}
                 />
@@ -38,16 +38,15 @@ export default class Profile extends Component{
                   fontSize: 20,
                 }}
                 >"Lorem ipsum dolor"</Text>
-               <ButtonR style={styles.mainButton}
-                 textStyle={{color:"white"}}
+              <View style={styles.mainButton}
+                 ><Text style={{fontSize:16, color: 'white'}}
                  onPress={
                    ()=> navigate("TaskPage",{})
                  }
-
-                 >Take task</ButtonR>
+                 >Take task</Text></View>
                 <View style={styles.menuBar}>
                 <View style={styles.menuButton1}>
-                  <Text style={{alignSelf:'center'}}>5</Text>
+                  <Text style={{alignSelf:'center', fontSize:18,}}>5</Text>
                   <Text style={{alignSelf:'center'}}
 
                     onPress={
@@ -56,7 +55,7 @@ export default class Profile extends Component{
                     >achives</Text>
                 </View>
                 <View  style={styles.menuButton2}>
-                  <Text style={{alignSelf:'center'}}>4</Text>
+                  <Text style={{alignSelf:'center', fontSize:18,}}>4</Text>
                   <Text style={{alignSelf:'center'}}
                     onPress={
                       ()=> navigate("DoePublications",{})
@@ -64,7 +63,7 @@ export default class Profile extends Component{
                     >publication</Text>
                 </View>
                 <View  style={styles.menuButton3}>
-                <Text style={{alignSelf:'center'}}>5</Text>
+                <Text style={{alignSelf:'center', fontSize:18,}}>5</Text>
                 <Text style={{alignSelf:'center'}}
                   onPress={
                     ()=> navigate("DoeFollowers",{})
@@ -122,6 +121,7 @@ const styles  = StyleSheet.create({
     marginRight: -1,
    justifyContent: 'center',
       flexDirection:'column',
+      alignContent: 'center',
 
  },
 
@@ -133,6 +133,7 @@ menuButton2:{
   borderStyle: 'solid',
   borderWidth: 1,
    justifyContent: 'center',
+   alignContent: 'center',
       flexDirection:'column',
  },
  menuButton3:{
@@ -145,16 +146,19 @@ menuButton2:{
   marginLeft: -1,
    justifyContent: 'center',
    flexDirection:'column',
+   alignContent: 'center',
 
    },
    mainButton:{
-     borderRadius: 0,
-     width: 140,
-     height: 50,
-     alignSelf: 'center',
+     borderRadius: 25,
+     width: 150,
+     height: 45,
+     // alignSelf: 'center',
      backgroundColor: '#27ae60',
      borderColor: '#27ae60',
      marginBottom: 20,
+     justifyContent: 'center',
+     alignItems: 'center'
    }
 
 

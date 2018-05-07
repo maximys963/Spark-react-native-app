@@ -14,13 +14,14 @@ import Tasks from "./Components/Tasks/Tasks";
 import {StackNavigator} from 'react-navigation';
 
 const Navigation = StackNavigator({
-Third: {screen: Profile},
+
   Loading: {screen: Loading},
   Zero: {screen: Screen},
   ZeroOne: {screen: Swiper},
   ZeroTwo: {screen: Boiler},
   First: {screen: Login},
   Second: {screen: Second},
+  Third: {screen: Profile},
 
 
   Achiv: {screen: Achives},

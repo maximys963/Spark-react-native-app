@@ -46,7 +46,7 @@ export default class Loading extends Component{
         <Text
           style={{fontSize: 24, marginRight:-25, color: '#2d3435', fontFamily: 'open-sans-bold'}}
 
-          >Loading</Text>): null
+          >Зачекайте</Text>): null
       }
         <View style={{width:100, height:100,marginRight:-25, marginBottom: -12}}>
         <LottieView source={require('./load.json')} ref={animation=>{this.animation = animation}} />
@@ -54,12 +54,12 @@ export default class Loading extends Component{
       </View>
       </View>
       <View
-        style={{ alignItems: 'center', justifyContent: 'space-between'}}
+        style={{ alignItems: 'center', justifyContent: 'space-between', width: 300,}}
         >
         {
           this.state.fontLoaded ? (
       <Text style={styles.text}>
-      "Just make yourself better..."
+      "Ніколи не пізно ставити нові цілі і мріяти про щось більше."
     </Text>
   ): null
     }
@@ -88,7 +88,7 @@ const styles  = StyleSheet.create({
 
   },
   text:{
-    fontSize: 34,
+    fontSize: 24,
     textAlign: 'center',
     fontFamily: 'open-sans-bold'
 

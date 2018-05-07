@@ -29,7 +29,7 @@ export default class Screen extends Component {
         <View style={styles.slide}>
           <Icon name="ios-walk-outline" {...iconStyles} />
           <Text style={styles.header}>НАБЕРИСЬ МУЖНОСТІ</Text>
-          <Text style={styles.text}>Вийди із зони свого комфорту</Text>
+          <Text style={styles.text}>Вийди із своєї зони комфорту</Text>
         </View>
         {/* Second screen */}
         <View style={styles.slide}>
@@ -40,7 +40,7 @@ export default class Screen extends Component {
         {/* Third screen */}
         <View style={styles.slide}>
           <Icon name="ios-people" {...iconStyles} />
-          <Text style={styles.header}>ЗАХОДЬ ДРУЗІВ</Text>
+          <Text style={styles.header}>ЗНАХОДЬ ДРУЗІВ</Text>
           <Text style={styles.text}>Обмінюйтесь враженнями і викликами</Text>
         </View>
       </Swiper>

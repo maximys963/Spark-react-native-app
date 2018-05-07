@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
-import {AppRegistry, Text, View, StyleSheet, Image, ScrollView} from 'react-native';
+import {AppRegistry, Text, View, StyleSheet, Image} from 'react-native';
 import { Constants } from 'expo';
 import ButtonR  from "apsl-react-native-button";
 
 
 
-export default class Profile extends Component{
+export default class Max extends Component{
   static navigationOptions= {
-    title: "John Doe",
+    title: "Max",
     headerStyle: {
      backgroundColor: '#ecf0f1',
    },
@@ -29,9 +29,9 @@ export default class Profile extends Component{
                 marginTop: 30,
                marginBottom: 10,
               }}
-              source={require('../../logo/user.png')}
+                source={require('../../../logo/user.png')}
                 />
-              <Text style={{fontSize:24}}>Джон Доу</Text>
+              <Text style={{fontSize:24}}>Панасенко Максим</Text>
               <Text
                 style={{
                   marginBottom: 20,
@@ -43,46 +43,37 @@ export default class Profile extends Component{
                  onPress={
                    ()=> navigate("TaskPage",{})
                  }
-                 >Отримати завдання</Text></View>
+                 >Додати</Text></View>
                 <View style={styles.menuBar}>
                 <View style={styles.menuButton1}>
                   <Text style={{alignSelf:'center', fontSize:18,}}>5</Text>
                   <Text style={{alignSelf:'center'}}
 
-                    onPress={
-                      ()=> navigate("Achiv",{})
-                    }
+
                     >досягнень</Text>
                 </View>
                 <View  style={styles.menuButton2}>
                   <Text style={{alignSelf:'center', fontSize:18,}}>4</Text>
                   <Text style={{alignSelf:'center'}}
-                    onPress={
-                      ()=> navigate("DoePublications",{})
-                    }
+
                     >публікацій</Text>
                 </View>
                 <View  style={styles.menuButton3}>
                 <Text style={{alignSelf:'center', fontSize:18,}}>5</Text>
                 <Text style={{alignSelf:'center'}}
-                  onPress={
-                    ()=> navigate("DoeFollowers",{})
-                  }
+
 
                   >друзів</Text>
             </View>
             </View>
-            <ScrollView style={styles.storyContainer}
-              horizontal={true}
-
-              >
+            <View style={styles.storyContainer}>
               <View style={styles.story}></View>
               <View style={styles.story}></View>
               <View style={styles.story}></View>
               <View style={styles.story}></View>
 
 
-            </ScrollView>
+            </View>
 
       </View>
 
@@ -92,11 +83,10 @@ export default class Profile extends Component{
 const styles  = StyleSheet.create({
   story:{
     backgroundColor: 'grey',
-    width:100,
-    height: 120,
+    width:75,
+    height: 75,
     borderRadius: 25,
     marginRight:3,
-    marginLeft:3,
   },
   storyContainer:{
     marginTop: 15,

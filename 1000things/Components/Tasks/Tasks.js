@@ -20,20 +20,21 @@ const ThirdRoute = () => <Social style={[ styles.container, { backgroundColor: '
 const FouthRoute = () => <Sport style={[ styles.container, { backgroundColor: '#673ab7' } ]} />;
 
 
+
 export default class DoePub extends Component{
   state = {
   index: 0,
   routes: [
-    { key: 'first', title: 'Art' },
-    { key: 'second', title: 'Rest' },
-    { key: 'third', title: 'Social' },
-    { key: 'fouth', title: 'Sport' },
+    { key: 'first', title: 'Мистецтво' },
+    { key: 'second', title: 'Відпочинок' },
+    { key: 'third', title: 'Соціальне' },
+    { key: 'fouth', title: 'Спорт' },
   ],
 };
 
 _handleIndexChange = index => this.setState({ index });
 
-_renderHeader = props => <TabBar {...props} />;
+_renderHeader = props => <TabBar style={{backgroundColor:'#2ecc71'}}{...props} />;//Макс все норм  я ничего не испортил
 
 _renderScene = SceneMap({
   first: FirstRoute,
@@ -41,7 +42,6 @@ _renderScene = SceneMap({
   third: ThirdRoute,
   fouth: FouthRoute,
 });
-
 render() {
   return (
     <TabViewAnimated
@@ -59,5 +59,5 @@ const styles  = StyleSheet.create({
   container: {
      flex: 1,
    },
-   
+
 });

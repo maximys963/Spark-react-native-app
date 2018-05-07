@@ -11,10 +11,14 @@ import Swiper from "./Components/Login/app/components/Swiper.js";
 import Boiler from "./Components/Login/app/components/Boiler.js";
 import Loading from "./Components/Loading/Loading";
 import Tasks from "./Components/Tasks/Tasks";
+import Alina from "./Components/Followers/FolowProfile/Alina";
+import Arina from "./Components/Followers/FolowProfile/Arina";
+import Max from "./Components/Followers/FolowProfile/Max";
 import {StackNavigator} from 'react-navigation';
 
 const Navigation = StackNavigator({
 
+  DoePublications: {screen: DoePub},
   Loading: {screen: Loading},
   Zero: {screen: Screen},
   ZeroOne: {screen: Swiper},
@@ -22,12 +26,13 @@ const Navigation = StackNavigator({
   First: {screen: Login},
   Second: {screen: Second},
   Third: {screen: Profile},
-
-
   Achiv: {screen: Achives},
-  DoePublications: {screen: DoePub},
-  DoeFollowers: {screen: DoeFol},
+
   TaskPage: {screen: Tasks},
+  DoeFollowers: {screen: DoeFol},
+  MaxProfile: {screen: Max},
+  ArinaProfile: {screen: Arina},
+  AlinaProfile: {screen: Alina},
 
 
 

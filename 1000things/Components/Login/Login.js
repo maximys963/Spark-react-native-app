@@ -37,7 +37,7 @@ export default class Login extends Component{
           <TextInput
             style={styles.input}
             placeholderTextColor = 'rgba(255,255,255, 0.9)'
-            placeholder="email or username"
+            placeholder="імейл адреса"
             keyboardType="email-address"
             underlineColorAndroid="rgba(0,0,0,0)"
             onSubmitEditing={
@@ -52,7 +52,7 @@ export default class Login extends Component{
            <Icon style={styles.Icons} name="fingerprint" color='rgba(255,255,255, 0.9)' size={30} />
 
           <TextInput
-            placeholder="password"
+            placeholder="пароль"
             secureTextEntry
             placeholderTextColor = 'rgba(255,255,255, 0.9)'
             underlineColorAndroid="rgba(0,0,0,0)"
@@ -71,11 +71,11 @@ export default class Login extends Component{
              ()=> navigate("Second",{})
            }
 
-           >Login</ButtonR>
+           >Увійти</ButtonR>
          <Text
            style={{alignSelf: 'center'}}
 
-            >New User? Sing Up</Text>
+            >Зареєструватись тут</Text>
 
         </View>
       </KeyboardAvoidingView>

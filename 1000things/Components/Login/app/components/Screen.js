@@ -27,21 +27,21 @@ export default class Screen extends Component {
       <Swiper navigation={this.props.navigation}>
         {/* First screen */}
         <View style={styles.slide}>
-          <Icon name="ios-home" {...iconStyles} />
-          <Text style={styles.header}>IMB</Text>
-          <Text style={styles.text}>Forever</Text>
+          <Icon name="ios-walk-outline" {...iconStyles} />
+          <Text style={styles.header}>НАБЕРИСЬ МУЖНОСТІ</Text>
+          <Text style={styles.text}>Вийди із зони свого комфорту</Text>
         </View>
         {/* Second screen */}
         <View style={styles.slide}>
-          <Icon name="ios-people" {...iconStyles} />
-          <Text style={styles.header}>Holly</Text>
-          <Text style={styles.text}>ULM</Text>
+          <Icon name="ios-bonfire" {...iconStyles} />
+          <Text style={styles.header}>ДОЛАЙ СТЕРЕОТИПИ</Text>
+          <Text style={styles.text}>Зроби себе щасливішим, а світ кращим</Text>
         </View>
         {/* Third screen */}
         <View style={styles.slide}>
-          <Icon name="ios-videocam" {...iconStyles} />
-          <Text style={styles.header}>RL</Text>
-          <Text style={styles.text}>watching you</Text>
+          <Icon name="ios-people" {...iconStyles} />
+          <Text style={styles.header}>ЗАХОДЬ ДРУЗІВ</Text>
+          <Text style={styles.text}>Обмінюйтесь враженнями і викликами</Text>
         </View>
       </Swiper>
     );
@@ -64,7 +64,9 @@ const styles = StyleSheet.create({
     color: "#FFFFFF",
     fontSize: 30,
     fontWeight: "bold",
-    marginVertical: 15
+    marginVertical: 15,
+    textAlign: "center",
+
   },
   // Text below header
   text: {

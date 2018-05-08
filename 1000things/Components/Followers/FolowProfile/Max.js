@@ -24,12 +24,12 @@ export default class Max extends Component{
 
           <Image
               style={{
-                width: 120,
-                height: 120,
+                width: 170,
+                height: 170,
                 marginTop: 30,
                marginBottom: 10,
               }}
-                source={require('../../../logo/user.png')}
+                source={require('./photos/Max1.png')}
                 />
               <Text style={{fontSize:24}}>Панасенко Максим</Text>
               <Text

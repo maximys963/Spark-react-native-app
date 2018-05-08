@@ -18,7 +18,7 @@ import {StackNavigator} from 'react-navigation';
 
 const Navigation = StackNavigator({
 
-  DoePublications: {screen: DoePub},
+
   Loading: {screen: Loading},
   Zero: {screen: Screen},
   ZeroOne: {screen: Swiper},
@@ -27,12 +27,13 @@ const Navigation = StackNavigator({
   Second: {screen: Second},
   Third: {screen: Profile},
   Achiv: {screen: Achives},
-
+  DoePublications: {screen: DoePub},
   TaskPage: {screen: Tasks},
   DoeFollowers: {screen: DoeFol},
   MaxProfile: {screen: Max},
   ArinaProfile: {screen: Arina},
   AlinaProfile: {screen: Alina},
+
 
 
 

@@ -72,10 +72,11 @@ export default class Login extends Component{
            }
 
            >Увійти</ButtonR>
-         <Text
-           style={{alignSelf: 'center'}}
+         <TouchableHighlight>
+           <Text
+           style={{alignSelf: 'center', color:'grey'} }
 
-            >Зареєструватись тут</Text>
+            >Зареєструватись тут</Text></TouchableHighlight>
 
         </View>
       </KeyboardAvoidingView>

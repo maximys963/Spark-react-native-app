@@ -22,15 +22,18 @@ export default class Alina extends Component{
 
       <View style={styles.container}>
 
+
+        <View>
           <Image
               style={{
-                width: 120,
-                height: 120,
+                width: 170,
+                height: 170,
                 marginTop: 30,
                marginBottom: 10,
               }}
-              source={require('../../../logo/user.png')}
+              source={require('./photos/Alina.png')}
                 />
+              </View>
               <Text style={{fontSize:24}}>Богун Аліна</Text>
               <Text
                 style={{

@@ -20,7 +20,11 @@ export default class DoeFol extends Component{
     return(
       <View style={styles.container}>
     <View style={styles.follower}>
-      <View style={styles.followImage}></View>
+
+      <Image style={styles.followImage}
+          source={require('./FolowProfile/photos/Alina.png')}
+        />
+
       <View style={styles.textContainer}>
       <Text style={{fontSize:16,  } }
         onPress={
@@ -32,7 +36,11 @@ export default class DoeFol extends Component{
     </View>
     <View style={{ width:window.width, height: 2, backgroundColor:'grey'}}></View>
     <View style={styles.follower}>
-      <View style={styles.followImage}></View>
+
+      <Image style={styles.followImage}
+          source={require('./FolowProfile/photos/Arina.png')}
+        />
+
       <View style={styles.textContainer}>
       <Text style={{fontSize:16, } }
         onPress={
@@ -44,7 +52,11 @@ export default class DoeFol extends Component{
     </View>
     <View style={{ width:window.width, height: 2, backgroundColor:'grey'}}></View>
     <View style={styles.follower}>
-      <View style={styles.followImage}></View>
+
+      <Image style={styles.followImage}
+          source={require('./FolowProfile/photos/Max1.png')}
+        />
+    
       <View style={styles.textContainer}>
       <Text style={{fontSize:16, } }
         onPress={
@@ -74,8 +86,6 @@ follower:{
 followImage:{
   height: 60,
   width: 60,
-  borderRadius: 45,
-  backgroundColor: 'grey',
   marginLeft: 5,
 },
 textContainer:{

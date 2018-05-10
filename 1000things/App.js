@@ -18,7 +18,6 @@ import {StackNavigator} from 'react-navigation';
 
 const Navigation = StackNavigator({
 
-
   Loading: {screen: Loading},
   Zero: {screen: Screen},
   ZeroOne: {screen: Swiper},
@@ -33,11 +32,6 @@ const Navigation = StackNavigator({
   MaxProfile: {screen: Max},
   ArinaProfile: {screen: Arina},
   AlinaProfile: {screen: Alina},
-
-
-
-
-
 });
 export default Navigation;
 // export default class myapp extends Component{

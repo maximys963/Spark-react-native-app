@@ -4,10 +4,14 @@ import { Constants } from 'expo';
 import ButtonR  from "apsl-react-native-button";
 import LottieView from 'lottie-react-native';
 import { Font } from 'expo';
+import TimerMixin from 'react-timer-mixin';
+import { createStackNavigator } from 'react-navigation';
+
 
 
 
 export default class Loading extends Component{
+
   static navigationOptions= {
     title: "Loading Page",
     headerStyle: {
@@ -17,11 +21,14 @@ export default class Loading extends Component{
   };
   constructor(props) {
       super(props);
+      // this.loadChecking = this.loadChecking.bind(this);
       this.state = {
         progress: new Animated.Value(0),
         fontLoaded: false,
+         date: 0,
       };
     }
+    // let {navigate} = this.props.navigation
 
       async componentDidMount(){
           this.animation.play();
@@ -29,7 +36,24 @@ export default class Loading extends Component{
           'open-sans-bold':require('../../fonts/Nunito-Regular.ttf')
         });
         this.setState({fontLoaded: true});
+
       }
+
+    componentWillMount() {
+      this.timerID = setInterval(
+    () => this.tick(),
+    7000
+  );
+    }
+
+      tick() {
+    this.setState({
+      date: 1
+    });
+    this.props.navigation.navigate("Zero")
+        console.log(`is works`);
+        clearInterval(this.timerID);
+  }
 
   render(){
     var {navigate} = this.props.navigation;
@@ -63,14 +87,6 @@ export default class Loading extends Component{
     </Text>
   ): null
     }
-      <Button style ={styles.buttonText}
-        onPress={
-          ()=> navigate("Zero",{})
-        }
-        title="Agree"
-        color="#2ecc71"
-        accessibilityLabel="Learn more about this purple button"
-        />
       </View>
       </View>
 

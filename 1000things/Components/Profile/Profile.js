@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {AppRegistry, Text, View, StyleSheet, Image, ScrollView} from 'react-native';
+import {AppRegistry, Text, View, StyleSheet, Image, ScrollView, ImageBackground} from 'react-native';
 import { Constants } from 'expo';
 import ButtonR  from "apsl-react-native-button";
 
@@ -20,13 +20,17 @@ export default class Profile extends Component{
       var {navigate} = this.props.navigation;
     return(
 
-      <View style={styles.container}>
+      <View  style={styles.container}>
 
+        <ImageBackground
+          style={{ height: 300, marginBottom:-25, justifyContent:'center', alignItems: 'center', }}
+          source={require('./sky.jpg')}
+          >
           <Image
               style={{
                 width: 120,
                 height: 120,
-                marginTop: 30,
+                marginTop: 10,
                marginBottom: 10,
               }}
               source={require('../../logo/user.png')}
@@ -38,6 +42,7 @@ export default class Profile extends Component{
                   fontSize: 20,
                 }}
                 >"Lorem ipsum dolor"</Text>
+              </ImageBackground>
               <View style={styles.mainButton}
                  ><Text style={{fontSize:16, color: 'white'}}
                  onPress={
@@ -107,8 +112,9 @@ const styles  = StyleSheet.create({
   container:{
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
+    backgroundColor: 'white'
+    // justifyContent: 'flex-start',
+    // alignItems: 'center',
 
   },
   menuBar:{
@@ -162,7 +168,8 @@ menuButton2:{
      borderColor: '#27ae60',
      marginBottom: 20,
      justifyContent: 'center',
-     alignItems: 'center'
+     alignItems: 'center',
+     alignSelf: 'center'
    }
 
 

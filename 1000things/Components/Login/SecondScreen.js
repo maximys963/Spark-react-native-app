@@ -19,6 +19,13 @@ import {YellowBox} from 'react-native';
 
 
 export default class Second extends Component{
+  static navigationOptions= {
+    title: "SecondScreen",
+    headerStyle: {
+     backgroundColor: '#ecf0f1',
+   },
+      header: null,
+  };
   constructor(props){
     super(props);
     this.ColorChange = this.ColorChange.bind(this);
@@ -199,6 +206,214 @@ ColorShade(isClicked){
    }
 
  }
+
+ ColorShade2(isClicked){
+    if(isClicked === 1){
+      return{
+        backgroundColor:"#bdc3c7",
+        marginBottom:20,
+          height: 60,
+          width: 280,
+          borderRadius: 0,
+          borderColor: "#bdc3c7",
+          position: "relative",
+          alignSelf: 'center'
+
+
+      }
+    }else if (isClicked === 2 ){
+      return{
+        backgroundColor:"rgba(231, 76, 60, 0.3)",
+        marginBottom:20,
+          height: 60,
+          width: 280,
+          borderRadius: 0,
+          borderColor: "rgba(231, 76, 60, 0.3)",
+          position: "relative",
+         alignSelf: 'center'
+
+
+      }
+    }else if(isClicked === 3){
+      return{
+        backgroundColor:"rgba(231, 76, 60, 0.5)",
+         marginBottom:20,
+          height: 60,
+          width: 280,
+          borderRadius: 0,
+          borderColor: "rgba(231, 76, 60, 0.5)",
+          position: "relative",
+         alignSelf: 'center'
+
+
+      }
+    }else if(isClicked === 4){
+      return{
+        backgroundColor:"rgba(231, 76, 60, 0.8)",
+         marginBottom:20,
+          height: 60,
+          width: 280,
+          borderRadius: 0,
+          borderColor: " rgba(231, 76, 60, 0.8)",
+          position: "relative",
+          alignSelf: 'center'
+
+
+      }
+    }else {
+      return{
+        backgroundColor:"rgba(231, 76, 60,1.0)",
+        marginBottom:20,
+          height: 60,
+          width: 280,
+          borderRadius: 0,
+          borderColor: "rgba(231, 76, 60,1.0)",
+          position: "relative",
+          alignSelf: 'center'
+
+
+      }
+    }
+
+  }
+  ColorShade3(isClicked){
+     if(isClicked === 1){
+       return{
+         backgroundColor:"#bdc3c7",
+         marginBottom:20,
+           height: 60,
+           width: 280,
+           borderRadius: 0,
+           borderColor: "#bdc3c7",
+           position: "relative",
+           alignSelf: 'center'
+
+
+       }
+     }else if (isClicked === 2 ){
+       return{
+         backgroundColor:"rgba(230, 126, 34, 0.3)",
+         marginBottom:20,
+           height: 60,
+           width: 280,
+           borderRadius: 0,
+           borderColor: "rgba(230, 126, 34, 0.3)",
+           position: "relative",
+          alignSelf: 'center'
+
+
+       }
+     }else if(isClicked === 3){
+       return{
+         backgroundColor:"rgba(230, 126, 34, 0.5)",
+          marginBottom:20,
+           height: 60,
+           width: 280,
+           borderRadius: 0,
+           borderColor: "rgba(230, 126, 34, 0.5)",
+           position: "relative",
+          alignSelf: 'center'
+
+
+       }
+     }else if(isClicked === 4){
+       return{
+         backgroundColor:"rgba(230, 126, 34, 0.8)",
+          marginBottom:20,
+           height: 60,
+           width: 280,
+           borderRadius: 0,
+           borderColor: " rgba(230, 126, 34, 0.8)",
+           position: "relative",
+           alignSelf: 'center'
+
+
+       }
+     }else {
+       return{
+         backgroundColor:"rgba(230, 126, 34,1.0)",
+         marginBottom:20,
+           height: 60,
+           width: 280,
+           borderRadius: 0,
+           borderColor: "rgba(230, 126, 34,1.0)",
+           position: "relative",
+           alignSelf: 'center'
+
+
+       }
+     }
+
+   }
+   ColorShade4(isClicked){
+      if(isClicked === 1){
+        return{
+          backgroundColor:"#bdc3c7",
+          marginBottom:20,
+            height: 60,
+            width: 280,
+            borderRadius: 0,
+            borderColor: "#bdc3c7",
+            position: "relative",
+            alignSelf: 'center'
+
+
+        }
+      }else if (isClicked === 2 ){
+        return{
+          backgroundColor:"rgba(241, 196, 15, 0.3)",
+          marginBottom:20,
+            height: 60,
+            width: 280,
+            borderRadius: 0,
+            borderColor: "rgba(241, 196, 15, 0.3)",
+            position: "relative",
+           alignSelf: 'center'
+
+
+        }
+      }else if(isClicked === 3){
+        return{
+          backgroundColor:"rgba(241, 196, 15, 0.5)",
+           marginBottom:20,
+            height: 60,
+            width: 280,
+            borderRadius: 0,
+            borderColor: "rgba(241, 196, 15, 0.5)",
+            position: "relative",
+           alignSelf: 'center'
+
+
+        }
+      }else if(isClicked === 4){
+        return{
+          backgroundColor:"rgba(241, 196, 15, 0.8)",
+           marginBottom:20,
+            height: 60,
+            width: 280,
+            borderRadius: 0,
+            borderColor: " rgba(241, 196, 15, 0.8)",
+            position: "relative",
+            alignSelf: 'center'
+
+
+        }
+      }else {
+        return{
+          backgroundColor:"rgba(241, 196, 15,1.0)",
+          marginBottom:20,
+            height: 60,
+            width: 280,
+            borderRadius: 0,
+            borderColor: "rgba(241, 196, 15,1.0)",
+            position: "relative",
+            alignSelf: 'center'
+
+
+        }
+      }
+
+    }
  Ready(first,second,third,fouth){
    if(first!== 1 && second!==1 && third!==1 && fouth!==1){
      return(false)
@@ -216,11 +431,18 @@ ColorShade(isClicked){
 
         <View style={styles.container}>
           <Text style={styles.titileText}>Виберіть пріорітетність діяльності</Text>
+          <View style={styles.tips}>
+            <View style={{backgroundColor: 'rgba(39, 174, 96, 0.3)', width: 25, height: 25}}></View>
+            <View style={{backgroundColor: 'rgba(39, 174, 96, 0.5)', width: 25, height: 25}}></View>
+            <View style={{backgroundColor: 'rgba(39, 174, 96, 0.8)', width: 25, height: 25}}></View>
+            <View style={{backgroundColor: 'rgba(39, 174, 96, 1.0)', width: 25, height: 25}}></View>
+
+          </View>
 
           <ButtonR
             textStyle={{color:"white"}}
             onPress={this.ColorChange}
-            style={this.ColorShade(this.state.isClicked)}
+            style={this.ColorShade2(this.state.isClicked)}
 
             accessibilityLabel="Learn more about this purple button"
             >Спорт</ButtonR>
@@ -228,14 +450,14 @@ ColorShade(isClicked){
           <ButtonR
               textStyle={{color:"white"}}
               onPress={this.ColorChange1}
-              style={this.ColorShade(this.state.isClicked1)}
+              style={this.ColorShade3(this.state.isClicked1)}
 
               accessibilityLabel="Learn more about this purple button"
               >Соціальне</ButtonR>
             <ButtonR
                 textStyle={{color:"white"}}
                 onPress={this.ColorChange2}
-                style={this.ColorShade(this.state.isClicked2)}
+                style={this.ColorShade4(this.state.isClicked2)}
 
                 accessibilityLabel="Learn more about this purple button"
                 >Творічість</ButtonR>
@@ -247,8 +469,9 @@ ColorShade(isClicked){
                   accessibilityLabel="Learn more about this purple button"
                   >Відпочинок</ButtonR>
                   <Button
-                    title="Go to Profile"
+                    title="Далі"
                     color = "rgba(46, 204, 113,1.0)"
+                    style = {styles.mainButton}
 
                     accessibilityLabel="Learn more about this purple button"
                     disabled = {this.Ready(this.state.isClicked,this.state.isClicked1,this.state.isClicked2,this.state.isClicked3)}
@@ -256,13 +479,17 @@ ColorShade(isClicked){
                     onPress={
                        ()=> navigate("Third",{})
                     }/>
-
         </View>
 
     );
   }
 }
 const styles  = StyleSheet.create({
+  tips:{
+    flexDirection: 'row',
+    justifyContent: 'center',
+      marginBottom: 10,
+  },
 
   container:{
     backgroundColor: '#ecf0f1',
@@ -288,8 +515,10 @@ const styles  = StyleSheet.create({
 
   },
   titileText:{
-    marginBottom: 20,
-    marginTop: 20,
+    marginBottom: 10,
+    marginTop: 60,
+    fontSize: 18,
+    color: "#7f8c8d"
 
   }
 

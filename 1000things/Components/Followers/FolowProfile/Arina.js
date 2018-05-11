@@ -30,7 +30,7 @@ export default class Arina extends Component{
                marginBottom: 10,
               }}
                 source={require('./photos/Arina.png')}
-                />
+                ></Image>
               <Text style={{fontSize:24}}>Дяківа Орися</Text>
               <Text
                 style={{

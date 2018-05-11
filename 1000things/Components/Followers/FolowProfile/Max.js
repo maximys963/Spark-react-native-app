@@ -30,7 +30,7 @@ export default class Max extends Component{
                marginBottom: 10,
               }}
                 source={require('./photos/Max1.png')}
-                />
+                ></Image>
               <Text style={{fontSize:24}}>Панасенко Максим</Text>
               <Text
                 style={{

@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import {AppRegistry, Text, View, StyleSheet, Image, ScrollView, ImageBackground} from 'react-native';
+import {AppRegistry, Text, View, StyleSheet, Image, ScrollView, ImageBackground, Animated, Easing} from 'react-native';
 import { Constants } from 'expo';
 import ButtonR  from "apsl-react-native-button";
+import LottieView from 'lottie-react-native';
 
 
 
@@ -13,9 +14,15 @@ export default class Profile extends Component{
    },
     header: null,
   };
-  constructor(props){
-    super(props);
-}
+  constructor(props) {
+      super(props);
+      // this.loadChecking = this.loadChecking.bind(this);
+      this.state = {
+        progress: new Animated.Value(0),
+        fontLoaded: false,
+         date: 0,
+      };
+    }
   render(){
       var {navigate} = this.props.navigation;
     return(
@@ -35,11 +42,12 @@ export default class Profile extends Component{
               }}
               source={require('../../logo/user.png')}
                 />
-              <Text style={{fontSize:24}}>Джон Доу</Text>
+              <Text style={{fontSize:24, color: 'white'}}>Джон Доу</Text>
               <Text
                 style={{
                   marginBottom: 20,
                   fontSize: 20,
+                  color: 'white',
                 }}
                 >"Lorem ipsum dolor"</Text>
               </ImageBackground>
@@ -59,6 +67,7 @@ export default class Profile extends Component{
                     }
                     >досягнень</Text>
                 </View>
+                <View style={styles.separ}/>
                 <View  style={styles.menuButton2}>
                   <Text style={{alignSelf:'center', fontSize:18,}}>4</Text>
                   <Text style={{alignSelf:'center'}}
@@ -67,6 +76,7 @@ export default class Profile extends Component{
                     }
                     >публікацій</Text>
                 </View>
+                <View style={styles.separ}/>
                 <View  style={styles.menuButton3}>
                 <Text style={{alignSelf:'center', fontSize:18,}}>5</Text>
                 <Text style={{alignSelf:'center'}}
@@ -95,6 +105,12 @@ export default class Profile extends Component{
   }
 }
 const styles  = StyleSheet.create({
+  separ:{
+    height:40,
+    width:3,
+    borderRadius:60,
+    backgroundColor: 'grey',
+  },
   story:{
     backgroundColor: 'grey',
     width:100,
@@ -119,16 +135,13 @@ const styles  = StyleSheet.create({
   },
   menuBar:{
     flexDirection: 'row',
-    height:60
+    height:60,
+    width: window.width,
+    justifyContent: 'space-around',
+    alignItems: 'center',
   },
   menuButton1:{
-    borderColor: '#7f8c8d',
-     borderRadius: 0,
-     width:110,
      height:60,
-     borderStyle: 'solid',
-     borderWidth: 1,
-    marginRight: -1,
    justifyContent: 'center',
       flexDirection:'column',
       alignContent: 'center',
@@ -136,24 +149,13 @@ const styles  = StyleSheet.create({
  },
 
 menuButton2:{
-  borderColor: '#7f8c8d',
-  borderRadius: 0,
-  width:110,
   height:60,
-  borderStyle: 'solid',
-  borderWidth: 1,
    justifyContent: 'center',
    alignContent: 'center',
       flexDirection:'column',
  },
  menuButton3:{
-   borderColor: '#7f8c8d',
-  borderRadius: 0,
-  width:110,
   height:60,
-  borderStyle: 'solid',
-  borderWidth: 1,
-  marginLeft: -1,
    justifyContent: 'center',
    flexDirection:'column',
    alignContent: 'center',

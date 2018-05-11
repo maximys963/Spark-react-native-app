@@ -17,7 +17,7 @@ import Max from "./Components/Followers/FolowProfile/Max";
 import {StackNavigator} from 'react-navigation';
 
 const Navigation = StackNavigator({
-
+  DoeFollowers: {screen: DoeFol},
   Loading: {screen: Loading},
   Zero: {screen: Screen},
   ZeroOne: {screen: Swiper},
@@ -28,10 +28,11 @@ const Navigation = StackNavigator({
   Achiv: {screen: Achives},
   DoePublications: {screen: DoePub},
   TaskPage: {screen: Tasks},
-  DoeFollowers: {screen: DoeFol},
+
   MaxProfile: {screen: Max},
-  ArinaProfile: {screen: Arina},
   AlinaProfile: {screen: Alina},
+  ArinaProfile: {screen: Arina},
+
 });
 export default Navigation;
 // export default class myapp extends Component{

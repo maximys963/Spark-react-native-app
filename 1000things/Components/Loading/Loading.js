@@ -23,9 +23,7 @@ export default class Loading extends Component{
       super(props);
       // this.loadChecking = this.loadChecking.bind(this);
       this.state = {
-        progress: new Animated.Value(0),
-        fontLoaded: false,
-         date: 0,
+        progress: new Animated.Value(0),  
       };
     }
     // let {navigate} = this.props.navigation

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {AppRegistry, Text, View, StyleSheet, Image} from 'react-native';
 import { Constants } from 'expo';
 import ButtonR  from "apsl-react-native-button";
+import FastImage from 'react-native-fast-image'
 
 
 
@@ -21,8 +22,9 @@ export default class DoeFol extends Component{
       <View style={styles.container}>
     <View style={styles.follower}>
 
-      <Image style={styles.followImage}
+      <FastImage style={styles.followImage}
           source={require('./FolowProfile/photos/Alina.png')}
+
         />
 
       <View style={styles.textContainer}>
@@ -37,8 +39,9 @@ export default class DoeFol extends Component{
     <View style={{ width:window.width, height: 2, backgroundColor:'grey'}}></View>
     <View style={styles.follower}>
 
-      <Image style={styles.followImage}
+      <FastImage style={styles.followImage}
           source={require('./FolowProfile/photos/Arina.png')}
+
         />
 
       <View style={styles.textContainer}>
@@ -53,10 +56,12 @@ export default class DoeFol extends Component{
     <View style={{ width:window.width, height: 2, backgroundColor:'grey'}}></View>
     <View style={styles.follower}>
 
-      <Image style={styles.followImage}
-          source={require('./FolowProfile/photos/Max1.png')}
+      <FastImage style={styles.followImage}
+          source={require('./FolowProfile/photos/Max1.png')
+          }
+
         />
-    
+
       <View style={styles.textContainer}>
       <Text style={{fontSize:16, } }
         onPress={

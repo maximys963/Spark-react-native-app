@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {AppRegistry, Text, View, StyleSheet, Image} from 'react-native';
 import { Constants } from 'expo';
 import ButtonR  from "apsl-react-native-button";
+import FastImage from 'react-native-fast-image'
 
 
 
@@ -24,7 +25,7 @@ export default class Alina extends Component{
 
 
         <View>
-          <Image
+          <FastImage
               style={{
                 width: 170,
                 height: 170,

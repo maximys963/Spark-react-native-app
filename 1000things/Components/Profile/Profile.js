@@ -31,25 +31,26 @@ export default class Profile extends Component{
 
         <ImageBackground
           style={{ height: 300, marginBottom:-25, justifyContent:'center', alignItems: 'center', }}
-          source={require('./sky.jpg')}
+          source={require('./skyblur.jpg')}
           >
           <Image
               style={{
-                width: 120,
-                height: 120,
+                width: 170,
+                height: 170,
                 marginTop: 10,
                marginBottom: 10,
+               borderRadius: 100,
               }}
-              source={require('../../logo/user.png')}
+              source={require('./mark2.jpg')}
                 />
-              <Text style={{fontSize:24, color: 'white'}}>Джон Доу</Text>
+              <Text style={{fontSize:24, color: 'white'}}>Марк Цукерберг</Text>
               <Text
                 style={{
                   marginBottom: 20,
                   fontSize: 20,
                   color: 'white',
                 }}
-                >"Lorem ipsum dolor"</Text>
+                >"Ars longa vita brevis"</Text>
               </ImageBackground>
               <View style={styles.mainButton}
                  ><Text style={{fontSize:16, color: 'white'}}
@@ -78,7 +79,7 @@ export default class Profile extends Component{
                 </View>
                 <View style={styles.separ}/>
                 <View  style={styles.menuButton3}>
-                <Text style={{alignSelf:'center', fontSize:18,}}>5</Text>
+                <Text style={{alignSelf:'center', fontSize:18,}}>3</Text>
                 <Text style={{alignSelf:'center'}}
                   onPress={
                     ()=> navigate("DoeFollowers",{})

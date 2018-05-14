@@ -26,7 +26,7 @@ export default class Login extends Component{
         <View style={styles.logoContainer}>
           <Image
             style={styles.logo}
-            source={require('../../logo/world.png')}
+            source={require('../../logo/spark.png')}
             />
         </View>
         <View style={styles.formContainer}>
@@ -126,8 +126,8 @@ searchIcon: {
     justifyContent: 'center'
   },
   logo:{
-    width: 100,
-    height: 100,
+    width: 150,
+    height: 170,
     margin: 0,
   },
   input:{

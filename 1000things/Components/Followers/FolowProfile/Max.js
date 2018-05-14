@@ -24,7 +24,7 @@ render(){
 
       <ImageBackground
         style={{ height: 300, marginBottom:-25, justifyContent:'center', alignItems: 'center', }}
-        source={require('./river.jpg')}
+        source={require('./riverblur.jpg')}
         >
         <Image
             style={{
@@ -50,7 +50,7 @@ render(){
                >Додати</Text></View>
               <View style={styles.menuBar}>
               <View style={styles.menuButton1}>
-                <Text style={{alignSelf:'center', fontSize:18,}}>5</Text>
+                <Text style={{alignSelf:'center', fontSize:18,}}>4</Text>
                 <Text style={{alignSelf:'center'}}
 
                   onPress={
@@ -60,7 +60,7 @@ render(){
               </View>
               <View style={styles.separ}/>
               <View  style={styles.menuButton2}>
-                <Text style={{alignSelf:'center', fontSize:18,}}>4</Text>
+                <Text style={{alignSelf:'center', fontSize:18,}}>3</Text>
                 <Text style={{alignSelf:'center'}}
                   onPress={
                     ()=> navigate("DoePublications",{})
@@ -69,7 +69,7 @@ render(){
               </View>
               <View style={styles.separ}/>
               <View  style={styles.menuButton3}>
-              <Text style={{alignSelf:'center', fontSize:18,}}>5</Text>
+              <Text style={{alignSelf:'center', fontSize:18,}}>3</Text>
               <Text style={{alignSelf:'center'}}
                 onPress={
                   ()=> navigate("DoeFollowers",{})

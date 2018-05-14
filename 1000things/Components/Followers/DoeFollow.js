@@ -23,7 +23,7 @@ export default class DoeFol extends Component{
     <View style={styles.follower}>
 
       <FastImage style={styles.followImage}
-          source={require('./FolowProfile/photos/Alina.png')}
+          source={require('./FolowProfile/photos/Alina512.png')}
 
         />
 
@@ -40,7 +40,7 @@ export default class DoeFol extends Component{
     <View style={styles.follower}>
 
       <FastImage style={styles.followImage}
-          source={require('./FolowProfile/photos/Arina.png')}
+          source={require('./FolowProfile/photos/Arina512.png')}
 
         />
 
@@ -57,7 +57,7 @@ export default class DoeFol extends Component{
     <View style={styles.follower}>
 
       <FastImage style={styles.followImage}
-          source={require('./FolowProfile/photos/Max1.png')
+          source={require('./FolowProfile/photos/Max512.png')
           }
 
         />

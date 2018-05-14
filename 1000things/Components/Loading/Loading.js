@@ -23,7 +23,7 @@ export default class Loading extends Component{
       super(props);
       // this.loadChecking = this.loadChecking.bind(this);
       this.state = {
-        progress: new Animated.Value(0),  
+        progress: new Animated.Value(0),
       };
     }
     // let {navigate} = this.props.navigation
@@ -59,9 +59,10 @@ export default class Loading extends Component{
 
       <View style={styles.container}>
       <View>
-        <View
-          style={{backgroundColor: "lightgrey", width:110, height:110, alignSelf: 'center'}}
-          ></View>
+        <Image
+          style={{width:130, height:150, alignSelf: 'center'}}
+          source={require('./spark.png')}
+          ></Image>
         <View style={{flexDirection: 'row', justifyContent: 'center', alignItems:'center' }}>
           {
               this.state.fontLoaded ? (

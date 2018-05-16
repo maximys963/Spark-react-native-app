@@ -42,7 +42,7 @@ render(){
                 fontSize: 20,
                 color: 'white',
               }}
-              >"Lorem ipsum dolor"</Text>
+              >"Amorem canat aetas prima"</Text>
             </ImageBackground>
             <View style={styles.mainButton}
                ><Text style={{fontSize:16, color: 'white'}}
@@ -79,12 +79,19 @@ render(){
           </View>
           <ScrollView style={styles.storyContainer}
             horizontal={true}
-
             >
-            <View style={styles.story}></View>
-            <View style={styles.story}></View>
-            <View style={styles.story}></View>
-            <View style={styles.story}></View>
+            <Image style={styles.story}
+            source={require('./ArinaST/Arina4.jpg')}
+              ></Image>
+            <Image style={styles.story}
+           source={require('./ArinaST/Arina3.jpg')}
+              ></Image>
+            <Image style={styles.story}
+               source={require('./ArinaST/Arina1.jpg')}
+              ></Image>
+            <Image style={styles.story}
+            source={require('./ArinaST/Arina2.jpg')}
+              ></Image>
 
 
           </ScrollView>
@@ -102,7 +109,6 @@ const styles  = StyleSheet.create({
     backgroundColor: 'grey',
   },
   story:{
-    backgroundColor: 'grey',
     width:100,
     height: 120,
     borderRadius: 25,

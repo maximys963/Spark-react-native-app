@@ -20,7 +20,7 @@ export default class Intro extends Component{
   render() {
     return (
       <View style={styles.container}>
-        <StatusBar barStyle="light-content" backgroundColor="#16a085" />
+        <StatusBar barStyle="light-content" backgroundColor="#2ecc71" />
         <Screen navigation={this.props.navigation} />
       </View>
     );

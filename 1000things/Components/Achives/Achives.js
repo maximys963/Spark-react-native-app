@@ -11,6 +11,7 @@ export default class Achives extends Component{
     headerStyle: {
      backgroundColor: '#ecf0f1',
    },
+     header: null
   };
   constructor(props){
     super(props);
@@ -22,43 +23,61 @@ export default class Achives extends Component{
       <View><Text style={{fontSize:16, alignSelf: 'center'}}>Ваші досягнення</Text></View>
       <View style={styles.rowcontainer}>
         <View style={styles.achivcontainer}>
-          <View style={styles.acheevka}></View>
+          <Image style={styles.acheevka}
+            source={require('./icons/lock.png')}
+            ></Image>
           <Text style={styles.achText}>Lorem ipsum dolor</Text>
         </View>
         <View style={styles.achivcontainer}>
-          <View style={styles.acheevka}></View>
+          <Image style={styles.acheevka}
+            source={require('./icons/android.png')}
+            ></Image>
           <Text style={styles.achText}>Lorem ipsum dolor</Text>
         </View>
         <View style={styles.achivcontainer}>
-          <View style={styles.acheevka}></View>
-          <Text style={styles.achText}>Lorem ipsum dolor</Text>
-        </View>
-      </View>
-      <View style={styles.rowcontainer}>
-        <View style={styles.achivcontainer}>
-          <View style={styles.acheevka}></View>
-          <Text style={styles.achText}>Lorem ipsum dolor</Text>
-        </View>
-        <View style={styles.achivcontainer}>
-          <View style={styles.acheevka}></View>
-          <Text style={styles.achText}>Lorem ipsum dolor</Text>
-        </View>
-        <View style={styles.achivcontainer}>
-          <View style={styles.acheevka}></View>
+          <Image style={styles.acheevka}
+            source={require('./icons/lock.png')}
+            ></Image>
           <Text style={styles.achText}>Lorem ipsum dolor</Text>
         </View>
       </View>
       <View style={styles.rowcontainer}>
         <View style={styles.achivcontainer}>
-          <View style={styles.acheevka}></View>
+          <Image style={styles.acheevka}
+            source={require('./icons/lock.png')}
+            ></Image>
           <Text style={styles.achText}>Lorem ipsum dolor</Text>
         </View>
         <View style={styles.achivcontainer}>
-          <View style={styles.acheevka}></View>
+          <Image style={styles.acheevka}
+            source={require('./icons/medal.png')}
+            ></Image>
           <Text style={styles.achText}>Lorem ipsum dolor</Text>
         </View>
         <View style={styles.achivcontainer}>
-          <View style={styles.acheevka}></View>
+          <Image style={styles.acheevka}
+            source={require('./icons/lock.png')}
+            ></Image>
+          <Text style={styles.achText}>Lorem ipsum dolor</Text>
+        </View>
+      </View>
+      <View style={styles.rowcontainer}>
+        <View style={styles.achivcontainer}>
+          <Image style={styles.acheevka}
+            source={require('./icons/photo.png')}
+            ></Image>
+          <Text style={styles.achText}>Lorem ipsum dolor</Text>
+        </View>
+        <View style={styles.achivcontainer}>
+          <Image style={styles.acheevka}
+            source={require('./icons/lock.png')}
+            ></Image>
+          <Text style={styles.achText}>Lorem ipsum dolor</Text>
+        </View>
+        <View style={styles.achivcontainer}>
+          <Image style={styles.acheevka}
+            source={require('./icons/lock.png')}
+            ></Image>
           <Text style={styles.achText}>Lorem ipsum dolor</Text>
         </View>
       </View>
@@ -85,8 +104,7 @@ achivcontainer:{
 
 },
 acheevka:{
-  backgroundColor: 'grey',
-  width: 70,
+  width: 80,
   height: 80,
 },
 achText:{

@@ -12,6 +12,7 @@ export default class DoeFol extends Component{
     headerStyle: {
      backgroundColor: '#ecf0f1',
    },
+     header: null
   };
   constructor(props){
     super(props);

@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     flex: 1, // Take up all screen
     justifyContent: "center", // Center vertically
     alignItems: "center", // Center horizontally
-    backgroundColor: "#16a085"
+    backgroundColor: "#2ecc71"
   },
   // Header styles
   header: {

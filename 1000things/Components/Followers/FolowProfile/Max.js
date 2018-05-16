@@ -42,7 +42,7 @@ render(){
                 fontSize: 20,
                 color: 'white',
               }}
-              >"Lorem ipsum dolor"</Text>
+              >"Labor improbus"</Text>
             </ImageBackground>
             <View style={styles.mainButton}
                ><Text style={{fontSize:16, color: 'white'}}
@@ -82,10 +82,18 @@ render(){
             horizontal={true}
 
             >
-            <View style={styles.story}></View>
-            <View style={styles.story}></View>
-            <View style={styles.story}></View>
-            <View style={styles.story}></View>
+            <Image style={styles.story}
+             source={require('./MaxST/Max4.jpg')}
+              ></Image>
+            <Image style={styles.story}
+              source={require('./MaxST/Max2.jpg')}
+              ></Image>
+            <Image style={styles.story}
+              source={require('./MaxST/Max3.jpg')}
+              ></Image>
+            <Image style={styles.story}
+              source={require('./MaxST/Max1.jpg')}
+              ></Image>
 
 
           </ScrollView>
@@ -103,7 +111,7 @@ const styles  = StyleSheet.create({
     backgroundColor: 'grey',
   },
   story:{
-    backgroundColor: 'grey',
+
     width:100,
     height: 120,
     borderRadius: 25,

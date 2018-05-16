@@ -29,12 +29,9 @@ const Navigation = StackNavigator({
   DoePublications: {screen: DoePub},
   TaskPage: {screen: Tasks},
   DoeFollowers: {screen: DoeFol},
-  MaxProfile: {screen: Max},
-  AlinaProfile: {screen: Alina},
   ArinaProfile: {screen: Arina},
-
-
-
+  AlinaProfile: {screen: Alina},
+  MaxProfile: {screen: Max},
 });
 export default Navigation;
 // export default class myapp extends Component{

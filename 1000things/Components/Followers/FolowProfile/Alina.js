@@ -75,18 +75,24 @@ render(){
                 onPress={
                   ()=> navigate("DoeFollowers",{})
                 }
-
                 >друзів</Text>
           </View>
           </View>
           <ScrollView style={styles.storyContainer}
             horizontal={true}
-
             >
-            <View style={styles.story}></View>
-            <View style={styles.story}></View>
-            <View style={styles.story}></View>
-            <View style={styles.story}></View>
+            <Image style={styles.story}
+            source={require('./AlinaST/Alina2.jpg')}
+              ></Image>
+            <Image style={styles.story}
+             source={require('./AlinaST/Alina4.jpg')}
+              ></Image>
+            <Image style={styles.story}
+              source={require('./AlinaST/Alina3.jpg')}
+              ></Image>
+            <Image style={styles.story}
+              source={require('./AlinaST/Alina1.jpg')}
+              ></Image>
 
 
           </ScrollView>
@@ -104,7 +110,6 @@ const styles  = StyleSheet.create({
     backgroundColor: 'grey',
   },
   story:{
-    backgroundColor: 'grey',
     width:100,
     height: 120,
     borderRadius: 25,

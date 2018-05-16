@@ -92,10 +92,18 @@ export default class Profile extends Component{
               horizontal={true}
 
               >
-              <View style={styles.story}></View>
-              <View style={styles.story}></View>
-              <View style={styles.story}></View>
-              <View style={styles.story}></View>
+              <Image style={styles.story}
+                 source={require('./MarkST/code.jpg')}
+                ></Image>
+              <Image style={styles.story}
+                 source={require('./MarkST/fun.jpg')}
+                ></Image>
+              <Image style={styles.story}
+                 source={require('./MarkST/run.jpg')}
+                ></Image>
+              <Image style={styles.story}
+                 source={require('./MarkST/wife.jpg')}
+                ></Image>
 
 
             </ScrollView>
@@ -113,7 +121,6 @@ const styles  = StyleSheet.create({
     backgroundColor: 'grey',
   },
   story:{
-    backgroundColor: 'grey',
     width:100,
     height: 120,
     borderRadius: 25,

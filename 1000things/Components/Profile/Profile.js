@@ -121,8 +121,8 @@ const styles  = StyleSheet.create({
     backgroundColor: 'grey',
   },
   story:{
-    width:100,
-    height: 120,
+    width:160,
+    height: 190,
     borderRadius: 25,
     marginRight:3,
     marginLeft:3,

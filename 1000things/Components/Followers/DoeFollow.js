@@ -73,6 +73,24 @@ export default class DoeFol extends Component{
       </View>
     </View>
       <View style={{ width:window.width, height: 2, backgroundColor:'grey'}}></View>
+        <View style={styles.follower}>
+
+          <FastImage style={styles.followImage}
+              source={require('./FolowProfile/photos/Vova512.png')
+              }
+
+            />
+
+          <View style={styles.textContainer}>
+          <Text style={{fontSize:16, } }
+            onPress={
+              ()=> navigate("VovaProfile",{})
+            }
+            >Мухін Володимир</Text>
+          <Text style={{color: '#2ecc71'}}>online</Text>
+          </View>
+        </View>
+      <View style={{ width:window.width, height: 2, backgroundColor:'grey'}}></View>
       </View>
     );
   }
@@ -100,11 +118,5 @@ textContainer:{
   alignItems: 'center',
   marginLeft: 10,
   width: 220,
-
-
 }
-
-
-
-
 });

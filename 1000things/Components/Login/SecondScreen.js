@@ -5,19 +5,6 @@ import ButtonR  from "apsl-react-native-button";
 import Profile from '../Profile/Profile';
 import {YellowBox} from 'react-native';
 
-// class Buttons extends Component{
-//   constructor(props){
-//     super(props)
-//     render(){
-//       return(
-//
-//
-//       )
-//     }
-//   }
-// }
-
-
 export default class Second extends Component{
   static navigationOptions= {
     title: "SecondScreen",

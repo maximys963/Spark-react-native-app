@@ -45,7 +45,7 @@ sourceHandle(Done){
         <View style={styles.achivcontainer}>
           <Text style={styles.headText}>Братюня</Text>
           <Image style={styles.acheevka}
-            source={require('./icons/lock.png')}
+            source={require('./icons/hand.png')}
             ></Image>
           <Text style={styles.achText}>Додай 3 друзів</Text>
         </View>

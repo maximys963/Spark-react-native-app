@@ -69,7 +69,7 @@ render(){
               </View>
               <View style={styles.separ}/>
               <View  style={styles.menuButton3}>
-              <Text style={{alignSelf:'center', fontSize:18,}}>3</Text>
+              <Text style={{alignSelf:'center', fontSize:18,}}>4</Text>
               <Text style={{alignSelf:'center'}}
                 onPress={
                   ()=> navigate("DoeFollowers",{})
@@ -112,8 +112,8 @@ const styles  = StyleSheet.create({
   },
   story:{
 
-    width:100,
-    height: 120,
+    width:160,
+    height: 190,
     borderRadius: 25,
     marginRight:3,
     marginLeft:3,

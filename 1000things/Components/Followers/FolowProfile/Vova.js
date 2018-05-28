@@ -2,13 +2,12 @@ import React, {Component} from 'react';
 import {AppRegistry, Text, View, StyleSheet, Image, ScrollView, ImageBackground, Animated, Easing} from 'react-native';
 import { Constants } from 'expo';
 import ButtonR  from "apsl-react-native-button";
-import FastImage from 'react-native-fast-image'
 
 
 
-export default class Alina extends Component{
+export default class Max extends Component{
   static navigationOptions= {
-    title: "Alina",
+    title: "Vova",
     headerStyle: {
      backgroundColor: '#ecf0f1',
    },
@@ -25,7 +24,7 @@ render(){
 
       <ImageBackground
         style={{ height: 300, marginBottom:-25, justifyContent:'center', alignItems: 'center', }}
-        source={require('./flowersblur.jpg')}
+        source={require('./cityblur.jpg')}
         >
         <Image
             style={{
@@ -34,20 +33,20 @@ render(){
               marginTop: 10,
              marginBottom: 10,
             }}
-            source={require('./photos/Alina512.png')}
+            source={require('./photos/Vova512.png')}
               />
-            <Text style={{fontSize:24, color: 'white'}}>Богун Аліна
-          </Text>
+            <Text style={{fontSize:24, color: 'white'}}>Мухін Володимир</Text>
             <Text
               style={{
                 marginBottom: 20,
                 fontSize: 20,
                 color: 'white',
               }}
-              >"Contra spem spero"</Text>
+              >"Cogito ergo sum"</Text>
             </ImageBackground>
             <View style={styles.mainButton}
                ><Text style={{fontSize:16, color: 'white'}}
+
                >Додати</Text></View>
               <View style={styles.menuBar}>
               <View style={styles.menuButton1}>
@@ -61,7 +60,7 @@ render(){
               </View>
               <View style={styles.separ}/>
               <View  style={styles.menuButton2}>
-                <Text style={{alignSelf:'center', fontSize:18,}}>5</Text>
+                <Text style={{alignSelf:'center', fontSize:18,}}>3</Text>
                 <Text style={{alignSelf:'center'}}
                   onPress={
                     ()=> navigate("DoePublications",{})
@@ -70,28 +69,30 @@ render(){
               </View>
               <View style={styles.separ}/>
               <View  style={styles.menuButton3}>
-              <Text style={{alignSelf:'center', fontSize:18,}}>3</Text>
+              <Text style={{alignSelf:'center', fontSize:18,}}>4</Text>
               <Text style={{alignSelf:'center'}}
                 onPress={
                   ()=> navigate("DoeFollowers",{})
                 }
+
                 >друзів</Text>
           </View>
           </View>
           <ScrollView style={styles.storyContainer}
             horizontal={true}
+
             >
             <Image style={styles.story}
-            source={require('./AlinaST/Alina2.jpg')}
+             source={require('./VovaST/vova1.png')}
               ></Image>
             <Image style={styles.story}
-             source={require('./AlinaST/Alina4.jpg')}
+              source={require('./VovaST/vova2.png')}
               ></Image>
             <Image style={styles.story}
-              source={require('./AlinaST/Alina3.jpg')}
+              source={require('./VovaST/vova3.png')}
               ></Image>
             <Image style={styles.story}
-              source={require('./AlinaST/Alina1.jpg')}
+              source={require('./VovaST/vova4.png')}
               ></Image>
 
 
@@ -110,6 +111,7 @@ const styles  = StyleSheet.create({
     backgroundColor: 'grey',
   },
   story:{
+
     width:160,
     height: 190,
     borderRadius: 25,

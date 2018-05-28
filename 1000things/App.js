@@ -14,10 +14,12 @@ import Tasks from "./Components/Tasks/Tasks";
 import Alina from "./Components/Followers/FolowProfile/Alina";
 import Arina from "./Components/Followers/FolowProfile/Arina";
 import Max from "./Components/Followers/FolowProfile/Max";
+import Vova from "./Components/Followers/FolowProfile/Vova"
 import {StackNavigator} from 'react-navigation';
+import Registration from './Components/Login/Registration';
 
 const Navigation = StackNavigator({
-  Achiv: {screen: Achives},
+  First: {screen: Login},
   Loading: {screen: Loading},
   Zero: {screen: Screen},
   ZeroOne: {screen: Swiper},
@@ -26,11 +28,14 @@ const Navigation = StackNavigator({
   Second: {screen: Second},
   Third: {screen: Profile},
   DoePublications: {screen: DoePub},
+  Achiv: {screen: Achives},
   TaskPage: {screen: Tasks},
   DoeFollowers: {screen: DoeFol},
+  VovaProfile: {screen: Vova},
   ArinaProfile: {screen: Arina},
   AlinaProfile: {screen: Alina},
   MaxProfile: {screen: Max},
+  RegistrationForm: {screen: Registration},
 });
 export default Navigation;
 // export default class myapp extends Component{

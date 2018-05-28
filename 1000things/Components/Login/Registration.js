@@ -8,9 +8,9 @@ import ButtonR  from "apsl-react-native-button";
 
 
 
-export default class Login extends Component{
-  static navigationOptions= {
-    title: "Login",
+export default class Registration extends Component{
+  static navigationOptions={
+    title: "Registaration",
     headerStyle: {
      backgroundColor: '#ecf0f1',
    },
@@ -23,21 +23,15 @@ export default class Login extends Component{
   var {navigate} = this.props.navigation;
     return(
       <KeyboardAvoidingView behavior="padding" style={styles.container}>
-        <View style={styles.logoContainer}>
-          <Image
-            style={styles.logo}
-            source={require('../../logo/spark.png')}
-            />
-        </View>
+
         <View style={styles.formContainer}>
 
           <View  style={styles.TextInputStyle} >
-          <Icon style={styles.Icons} name="email" color='rgba(255,255,255, 0.9)' size={30} />
 
           <TextInput
             style={styles.input}
             placeholderTextColor = 'rgba(255,255,255, 0.9)'
-            placeholder="імейл адреса"
+            placeholder="Введіть ваш імейл"
             keyboardType="email-address"
             underlineColorAndroid="rgba(0,0,0,0)"
             onSubmitEditing={
@@ -49,10 +43,10 @@ export default class Login extends Component{
           </View>
         <View style={styles.TextInputStyle}>
 
-           <Icon style={styles.Icons} name="fingerprint" color='rgba(255,255,255, 0.9)' size={30} />
+
 
           <TextInput
-            placeholder="пароль"
+            placeholder="Введіть ваш пароль"
             secureTextEntry
             placeholderTextColor = 'rgba(255,255,255, 0.9)'
             underlineColorAndroid="rgba(0,0,0,0)"
@@ -64,6 +58,23 @@ export default class Login extends Component{
 
 
        </View>
+       <View style={styles.TextInputStyle}>
+
+
+
+         <TextInput
+           placeholder="Повторіть пароль"
+           secureTextEntry
+           placeholderTextColor = 'rgba(255,255,255, 0.9)'
+           underlineColorAndroid="rgba(0,0,0,0)"
+           style={styles.input}
+           onSubmitEditing={
+              ()=> navigate("Second",{})
+           }
+          />
+
+
+      </View>
 
          <ButtonR style ={styles.buttonText}
           textStyle={{color:"white"}}
@@ -71,17 +82,8 @@ export default class Login extends Component{
              ()=> navigate("Second",{})
            }
 
-           >Увійти</ButtonR>
-         <TouchableHighlight>
-           <Text
-           style={{alignSelf: 'center', color:'grey'} }
-           onPress={
-             ()=>navigate("RegistrationForm")
-           }
-
-            >Зареєструватись тут</Text></TouchableHighlight>
-
-        </View>
+           >Зареєструватися</ButtonR>
+    </View>
       </KeyboardAvoidingView>
     );
   }
@@ -97,6 +99,7 @@ const styles  = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: 'rgba(46, 204, 113, 0.5)',
     height: 40,
+    marginBottom: 10,
     marginBottom: 10,
     width: 260,
     borderRadius: 20,
@@ -118,7 +121,7 @@ searchIcon: {
     backgroundColor: '#ecf0f1',
     paddingHorizontal: 20,
     flexDirection:'column',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-start',
     alignItems: 'center'
 
 
@@ -145,7 +148,8 @@ searchIcon: {
 
   },
   formContainer:{
-    marginBottom:70,
+
+    marginTop:40,
 
 
   },

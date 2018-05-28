@@ -1,7 +1,7 @@
 {
    "expo": {
-    "name": "ThousandThings",
-    "icon": "./atom.png",
+    "name": "Spark",
+    "icon": "./spark.png",
     "version": "1.0.0",
     "slug": "your-app-slug",
     "sdkVersion": "25.0.0",

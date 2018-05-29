@@ -24,7 +24,36 @@ export default class Registration extends Component{
     return(
       <KeyboardAvoidingView behavior="padding" style={styles.container}>
 
+
+
         <View style={styles.formContainer}>
+
+          <View style={styles.TopInputsContainer}>
+              <View style={styles.avatar}></View>
+              <View style={styles.TopInputs}>
+              <View  style={styles.NameSurname}>
+              <TextInput
+                style={styles.input}
+                placeholderTextColor = 'rgba(255,255,255, 0.9)'
+                placeholder="Введіть ваше ім'я"
+                keyboardType="email-address"
+                underlineColorAndroid="rgba(0,0,0,0)"
+                />
+              </View>
+              <View  style={styles.NameSurname} >
+
+              <TextInput
+                style={styles.input}
+                placeholderTextColor = 'rgba(255,255,255, 0.9)'
+                placeholder="Введіть ваше прізвище"
+                keyboardType="email-address"
+                underlineColorAndroid="rgba(0,0,0,0)"
+
+                />
+              </View>
+              </View>
+
+          </View>
 
           <View  style={styles.TextInputStyle} >
 
@@ -34,10 +63,6 @@ export default class Registration extends Component{
             placeholder="Введіть ваш імейл"
             keyboardType="email-address"
             underlineColorAndroid="rgba(0,0,0,0)"
-            onSubmitEditing={
-               ()=> navigate("Second",{})
-            }
-
 
             />
           </View>
@@ -51,9 +76,6 @@ export default class Registration extends Component{
             placeholderTextColor = 'rgba(255,255,255, 0.9)'
             underlineColorAndroid="rgba(0,0,0,0)"
             style={styles.input}
-            onSubmitEditing={
-               ()=> navigate("Second",{})
-            }
            />
 
 
@@ -68,9 +90,6 @@ export default class Registration extends Component{
            placeholderTextColor = 'rgba(255,255,255, 0.9)'
            underlineColorAndroid="rgba(0,0,0,0)"
            style={styles.input}
-           onSubmitEditing={
-              ()=> navigate("Second",{})
-           }
           />
 
 
@@ -79,9 +98,8 @@ export default class Registration extends Component{
          <ButtonR style ={styles.buttonText}
           textStyle={{color:"white"}}
            onPress={
-             ()=> navigate("Second",{})
+             ()=> navigate("First",{})
            }
-
            >Зареєструватися</ButtonR>
     </View>
       </KeyboardAvoidingView>
@@ -92,19 +110,41 @@ export default class Registration extends Component{
 
 
 const styles  = StyleSheet.create({
-  Icons:{
+  TopInputs:{
+    marginLeft:10,
+    height:90,
+    flexDirection: 'column',
+    justifyContent: 'space-between',
+  },
 
+  TopInputsContainer:{
+    flexDirection: 'row',
+    marginBottom:10,
+  },
+  avatar:{
+    width: 95,
+    height: 95,
+    backgroundColor: "grey",
+    borderRadius: 50,
   },
   TextInputStyle:{
     flexDirection: 'row',
     backgroundColor: 'rgba(46, 204, 113, 0.5)',
     height: 40,
     marginBottom: 10,
-    marginBottom: 10,
-    width: 260,
+    width: 285,
     borderRadius: 20,
     paddingLeft:5,
   },
+  NameSurname:{
+    flexDirection: 'row',
+    backgroundColor: 'rgba(46, 204, 113, 0.5)',
+    height: 40,
+    width: 180,
+    borderRadius: 20,
+    paddingLeft:5,
+  },
+
   searchSection: {
     flex: 1,
     flexDirection: 'row',
@@ -158,6 +198,8 @@ searchIcon: {
   backgroundColor: "#2ecc71",
   borderRadius: 20,
   height:40,
+  width:200,
+  alignSelf: 'center',
   }
 
 });

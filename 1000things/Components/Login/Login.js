@@ -57,9 +57,6 @@ export default class Login extends Component{
             placeholderTextColor = 'rgba(255,255,255, 0.9)'
             underlineColorAndroid="rgba(0,0,0,0)"
             style={styles.input}
-            onSubmitEditing={
-               ()=> navigate("Second",{})
-            }
            />
 
 

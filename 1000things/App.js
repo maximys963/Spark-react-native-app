@@ -19,6 +19,7 @@ import {StackNavigator} from 'react-navigation';
 import Registration from './Components/Login/Registration';
 
 const Navigation = StackNavigator({
+  RegistrationForm: {screen: Registration},
   First: {screen: Login},
   Loading: {screen: Loading},
   Zero: {screen: Screen},
@@ -35,7 +36,7 @@ const Navigation = StackNavigator({
   ArinaProfile: {screen: Arina},
   AlinaProfile: {screen: Alina},
   MaxProfile: {screen: Max},
-  RegistrationForm: {screen: Registration},
+
 });
 export default Navigation;
 // export default class myapp extends Component{

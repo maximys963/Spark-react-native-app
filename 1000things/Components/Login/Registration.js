@@ -4,11 +4,32 @@ import LoginForm from './LoginForm'
 import {StackNavigator} from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import ButtonR  from "apsl-react-native-button";
+import ValidationComponent from 'react-native-form-validator';
 
 
 
 
-export default class Registration extends Component{
+export default class Registration extends ValidationComponent{
+
+  constructor(props){
+    super(props);
+    this.state = {
+      name: '',
+      surname: '',
+      email: '',
+      password: '',
+    }
+  }
+
+  _onPressRegistration = () => {
+    this.validate({
+      name:{minlength:3, required: true},
+      email:{email: true, required:true},
+      password:{minlength:5, required: true},
+    });
+  }
+
+
   static navigationOptions={
     title: "Registaration",
     headerStyle: {
@@ -63,7 +84,9 @@ export default class Registration extends Component{
             placeholder="Введіть ваш імейл"
             keyboardType="email-address"
             underlineColorAndroid="rgba(0,0,0,0)"
-
+            ref="email"
+            onChangeText={(email) => this.setState({email})}
+            value={this.state.email}
             />
           </View>
         <View style={styles.TextInputStyle}>
@@ -97,11 +120,13 @@ export default class Registration extends Component{
 
          <ButtonR style ={styles.buttonText}
           textStyle={{color:"white"}}
-           onPress={
-             ()=> navigate("First",{})
-           }
+           onPress={this._onPressRegistration}
            >Зареєструватися</ButtonR>
+
+         <Text>{this.getErrorMessages()}</Text>
     </View>
+
+
       </KeyboardAvoidingView>
     );
   }

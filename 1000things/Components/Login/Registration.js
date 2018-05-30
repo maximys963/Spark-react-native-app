@@ -18,14 +18,17 @@ export default class Registration extends ValidationComponent{
       surname: '',
       email: '',
       password: '',
+      repeatepassword: '',
     }
   }
 
   _onPressRegistration = () => {
     this.validate({
-      name:{minlength:3, required: true},
-      email:{email: true, required:true},
-      password:{minlength:5, required: true},
+      name:{required: true, minlength:3 },
+      surname:{ required:true, minlength:3},
+      email:{required:true, email: true},
+      password:{required: true, minlength:5},
+      repeatepassword:{required:true},
     });
   }
 
@@ -59,7 +62,11 @@ export default class Registration extends ValidationComponent{
                 placeholder="Введіть ваше ім'я"
                 keyboardType="email-address"
                 underlineColorAndroid="rgba(0,0,0,0)"
+                ref='name'
+                onChangeText={(name) => this.setState({name})}
+                value={this.state.name}
                 />
+              {this.isFieldInError('name') && this.getErrorsInField('name').map(errorMessage => <Text>{errorMessage}</Text>) }
               </View>
               <View  style={styles.NameSurname} >
 
@@ -69,8 +76,11 @@ export default class Registration extends ValidationComponent{
                 placeholder="Введіть ваше прізвище"
                 keyboardType="email-address"
                 underlineColorAndroid="rgba(0,0,0,0)"
-
+                ref='surname'
+                onChangeText={(surname) => this.setState({surname})}
+                value={this.state.surname}
                 />
+              {this.isFieldInError('surname') && this.getErrorsInField('surname').map(errorMessage => <Text>{errorMessage}</Text>) }
               </View>
               </View>
 
@@ -88,10 +98,9 @@ export default class Registration extends ValidationComponent{
             onChangeText={(email) => this.setState({email})}
             value={this.state.email}
             />
-          </View>
+            </View>
+            {this.isFieldInError('email') && this.getErrorsInField('email').map(errorMessage => <Text>{errorMessage}</Text>) }
         <View style={styles.TextInputStyle}>
-
-
 
           <TextInput
             placeholder="Введіть ваш пароль"
@@ -99,10 +108,15 @@ export default class Registration extends ValidationComponent{
             placeholderTextColor = 'rgba(255,255,255, 0.9)'
             underlineColorAndroid="rgba(0,0,0,0)"
             style={styles.input}
+            ref='password'
+            onChangeText={(password) => this.setState({password})}
+            value={this.state.password}
            />
 
 
+
        </View>
+       {this.isFieldInError('password') && this.getErrorsInField('password').map(errorMessage => <Text>{errorMessage}</Text>) }
        <View style={styles.TextInputStyle}>
 
 
@@ -113,10 +127,14 @@ export default class Registration extends ValidationComponent{
            placeholderTextColor = 'rgba(255,255,255, 0.9)'
            underlineColorAndroid="rgba(0,0,0,0)"
            style={styles.input}
-          />
+           ref='repeatepassword'
+           onChangeText={(repeatepassword) => this.setState({repeatepassword})}
+           value={this.state.repeatepassword}
+           />
 
 
       </View>
+      {this.isFieldInError('repeatepassword') && this.getErrorsInField('repeatepassword').map(errorMessage => <Text>{errorMessage}</Text>) }
 
          <ButtonR style ={styles.buttonText}
           textStyle={{color:"white"}}

@@ -5,9 +5,7 @@ import {StackNavigator} from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import ButtonR  from "apsl-react-native-button";
 import ValidationComponent from 'react-native-form-validator';
-
-
-
+import axios from 'axios';
 
 export default class Registration extends ValidationComponent{
 
@@ -19,9 +17,26 @@ export default class Registration extends ValidationComponent{
       email: '',
       password: '',
       repeatepassword: '',
+      validationDone: false,
+      validatonPermission: false,
     }
   }
 
+handleSubmit = event => {
+  event.preventDefault();
+  axios.post('https://spark787.herokuapp.com/sign-up', JSON.stringify({
+  name: this.state.name,
+  surname: this.state.surname,
+  email: this.state.email,
+  password: this.state.password
+  }))
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    // console.log(error);
+  });
+}
   _onPressRegistration = () => {
     this.validate({
       name:{required: true, minlength:3 },
@@ -30,8 +45,11 @@ export default class Registration extends ValidationComponent{
       password:{required: true, minlength:5},
       repeatepassword:{required:true},
     });
-  }
 
+    this.setState({
+     validationDone: true,
+       });
+  }
 
   static navigationOptions={
     title: "Registaration",
@@ -40,15 +58,11 @@ export default class Registration extends ValidationComponent{
    },
    header: null,
 
-
-
   };
   render(){
   var {navigate} = this.props.navigation;
     return(
       <KeyboardAvoidingView behavior="padding" style={styles.container}>
-
-
 
         <View style={styles.formContainer}>
 
@@ -77,7 +91,7 @@ export default class Registration extends ValidationComponent{
                 keyboardType="email-address"
                 underlineColorAndroid="rgba(0,0,0,0)"
                 ref='surname'
-                onChangeText={(surname) => this.setState({surname})}
+                onChangeText={(surname) => this.setState({surname, validationDone: false}) }
                 value={this.state.surname}
                 />
               {this.isFieldInError('surname') && this.getErrorsInField('surname').map(errorMessage => <Text>{errorMessage}</Text>) }
@@ -113,13 +127,9 @@ export default class Registration extends ValidationComponent{
             value={this.state.password}
            />
 
-
-
        </View>
        {this.isFieldInError('password') && this.getErrorsInField('password').map(errorMessage => <Text>{errorMessage}</Text>) }
        <View style={styles.TextInputStyle}>
-
-
 
          <TextInput
            placeholder="Повторіть пароль"
@@ -132,7 +142,6 @@ export default class Registration extends ValidationComponent{
            value={this.state.repeatepassword}
            />
 
-
       </View>
       {this.isFieldInError('repeatepassword') && this.getErrorsInField('repeatepassword').map(errorMessage => <Text>{errorMessage}</Text>) }
 
@@ -141,7 +150,7 @@ export default class Registration extends ValidationComponent{
            onPress={this._onPressRegistration}
            >Зареєструватися</ButtonR>
 
-         <Text>{this.getErrorMessages()}</Text>
+         <Text style={styles.ErrorsMassage}>{this.getErrorMessages()}</Text>
     </View>
 
 
@@ -153,6 +162,9 @@ export default class Registration extends ValidationComponent{
 
 
 const styles  = StyleSheet.create({
+ErrorsMassage:{
+  color: 'red',
+},
   TopInputs:{
     marginLeft:10,
     height:90,
@@ -225,16 +237,9 @@ searchIcon: {
     marginBottom: 10,
     paddingLeft: 5,
     color: 'white',
-
-
-
-
   },
   formContainer:{
-
     marginTop:40,
-
-
   },
   buttonText:{
   borderColor: "#2ecc71",

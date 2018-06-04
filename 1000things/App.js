@@ -39,21 +39,3 @@ const Navigation = StackNavigator({
 
 });
 export default Navigation;
-// export default class myapp extends Component{
-//   render(){
-//     return(
-//
-//         <Login/>
-//
-//     );
-//   }
-// }
-//
-// const styles  = StyleSheet.create({
-//   container:{
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//   }
-// });
-// AppRegistry.registerComponent('myapp', ()=> myapp);

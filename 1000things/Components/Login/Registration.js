@@ -19,10 +19,18 @@ export default class Registration extends ValidationComponent{
       repeatepassword: '',
       validationDone: false,
       validatonPermission: false,
+      nameError: false,
+      surnameError: false,
+      emailError: false,
+      passwordError: false,
+      repeatepassword: false,
+      passwordIdentity: false,
     }
   }
 
 handleSubmit = event => {
+
+  if (this.state.validatonPermission === true){
   event.preventDefault();
   axios.post('https://spark787.herokuapp.com/sign-up', JSON.stringify({
   name: this.state.name,
@@ -36,6 +44,8 @@ handleSubmit = event => {
   .catch(function (error) {
     // console.log(error);
   });
+}
+
 }
   _onPressRegistration = () => {
     this.validate({

@@ -12,18 +12,18 @@ export default class Registration extends ValidationComponent{
   constructor(props){
     super(props);
     this.state = {
-      name: '',
-      surname: '',
-      email: '',
-      password: '',
-      repeatepassword: '',
+      name: '12',
+      surname: 'Panasenko',
+      email: 'maxim.jsdev@gmail.com',
+      password: '11223344',
+      repeatepassword: '11223344',
       validationDone: false,
       validatonPermission: false,
       nameError: false,
       surnameError: false,
       emailError: false,
       passwordError: false,
-      repeatepassword: false,
+      repeatepasswordError: false,
       passwordIdentity: false,
     }
   }
@@ -59,6 +59,23 @@ handleSubmit = event => {
     this.setState({
      validationDone: true,
        });
+     console.log(this.isFieldInError('name'));
+     console.log(this.isFieldInError("surname"));
+     console.log(this.isFieldInError('email'));
+     console.log(this.isFieldInError('password'));
+     console.log(this.isFieldInError('repeatepassword'));
+
+     if ( this.isFieldInError('name')){
+       this.setState({nameError: true})
+     }else if(this.isFieldInError("surname")){
+       this.setState({surnameError: true})
+     }else if(this.isFieldInError('email')){
+       this.setState({emailError: true})
+     }else if(this.isFieldInError('password')){
+       this.setState({passwordError: true})
+     }else if(this.isFieldInError('repeatepassword')){
+       this.setState({repeatepasswordError: true})
+     }
   }
 
   static navigationOptions={
@@ -101,7 +118,7 @@ handleSubmit = event => {
                 keyboardType="email-address"
                 underlineColorAndroid="rgba(0,0,0,0)"
                 ref='surname'
-                onChangeText={(surname) => this.setState({surname, validationDone: false}) }
+                onChangeText={(surname) => this.setState({surname, validationDone: false})  }
                 value={this.state.surname}
                 />
               {this.isFieldInError('surname') && this.getErrorsInField('surname').map(errorMessage => <Text>{errorMessage}</Text>) }

@@ -19,13 +19,14 @@ import {StackNavigator} from 'react-navigation';
 import Registration from './Components/Login/Registration';
 
 const Navigation = StackNavigator({
-  RegistrationForm: {screen: Registration},
+
   First: {screen: Login},
   Loading: {screen: Loading},
   Zero: {screen: Screen},
   ZeroOne: {screen: Swiper},
   ZeroTwo: {screen: Boiler},
   First: {screen: Login},
+  RegistrationForm: {screen: Registration},
   Second: {screen: Second},
   Third: {screen: Profile},
   DoePublications: {screen: DoePub},

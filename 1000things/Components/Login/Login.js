@@ -4,21 +4,50 @@ import LoginForm from './LoginForm'
 import {StackNavigator} from 'react-navigation';
 import { Icon } from 'react-native-elements';
 import ButtonR  from "apsl-react-native-button";
+import ValidationComponent from 'react-native-form-validator';
+import axios from 'axios';
 
 
 
 
-export default class Login extends Component{
+export default class Login extends ValidationComponent{
+  constructor(props){
+    super(props);
+    this.state = {
+      SignEmail: '',
+      SignPassword: '',
+      validationDone: false,
+      emailError: false,
+      passwordError: false,
+      ErrorEmailColor: '#e74c3c',
+      NormEmailColor: 'rgba(46, 204, 113, 0.5)',
+      ErrorPasswordColor: '#e74c3c',
+      NormPasswordColor: 'rgba(46, 204, 113, 0.5)',
+    }
+  }
   static navigationOptions= {
     title: "Login",
     headerStyle: {
      backgroundColor: '#ecf0f1',
    },
    header: null,
-
-
-
   };
+  _onPressSighnIn = () => {
+    console.log("validationDone before" + this.state.validationDone)
+    this.validate({
+      SignEmail:{required:true, email: true},
+      SignPassword:{required: true, minlength:5}
+    });
+    this.setState({
+      validationDone: true,
+    })
+    console.log("validationDone after" + this.state.validationDone)
+    console.log(this.isFieldInError('SignEmail'));
+    console.log(this.isFieldInError("SignPassword"));
+    console.log(this.state.SignEmail);
+    console.log(this.state.SignPassword);
+  }
+
   render(){
   var {navigate} = this.props.navigation;
     return(
@@ -35,17 +64,23 @@ export default class Login extends Component{
           <Icon style={styles.Icons} name="email" color='rgba(255,255,255, 0.9)' size={30} />
 
           <TextInput
-            style={styles.input}
+            style={{  flexDirection: 'row',
+              backgroundColor: 'rgba(46, 204, 113, 0.5)',
+              height: 40,
+              marginBottom: 10,
+              width: 260,
+              borderRadius: 20,
+              paddingLeft:5,}}
             placeholderTextColor = 'rgba(255,255,255, 0.9)'
             placeholder="імейл адреса"
             keyboardType="email-address"
             underlineColorAndroid="rgba(0,0,0,0)"
-            onSubmitEditing={
-               ()=> navigate("Second",{})
-            }
-
-
+            ref='SignEmail'
+            onChangeText={(SignEmail) => this.setState({SignEmail})}
             />
+
+
+
           </View>
         <View style={styles.TextInputStyle}>
 
@@ -56,17 +91,25 @@ export default class Login extends Component{
             secureTextEntry
             placeholderTextColor = 'rgba(255,255,255, 0.9)'
             underlineColorAndroid="rgba(0,0,0,0)"
-            style={styles.input}
+            ref='SignPassword'
+            style={{  flexDirection: 'row',
+              backgroundColor: 'rgba(46, 204, 113, 0.5)',
+              height: 40,
+              marginBottom: 10,
+              width: 260,
+              borderRadius: 20,
+              paddingLeft:5,}}
+              onChangeText={(SignPassword) => this.setState({SignPassword})}
+
            />
+
 
 
        </View>
 
          <ButtonR style ={styles.buttonText}
           textStyle={{color:"white"}}
-           onPress={
-             ()=> navigate("Second",{})
-           }
+           onPress={this._onPressSighnIn}
 
            >Увійти</ButtonR>
          <TouchableHighlight>
@@ -89,15 +132,6 @@ export default class Login extends Component{
 const styles  = StyleSheet.create({
   Icons:{
 
-  },
-  TextInputStyle:{
-    flexDirection: 'row',
-    backgroundColor: 'rgba(46, 204, 113, 0.5)',
-    height: 40,
-    marginBottom: 10,
-    width: 260,
-    borderRadius: 20,
-    paddingLeft:5,
   },
   searchSection: {
     flex: 1,

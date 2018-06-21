@@ -78,6 +78,9 @@ handleSubmit = event => {
      }
   }
 
+
+
+
   static navigationOptions={
     title: "Registaration",
     headerStyle: {
@@ -90,9 +93,7 @@ handleSubmit = event => {
   var {navigate} = this.props.navigation;
     return(
       <KeyboardAvoidingView behavior="padding" style={styles.container}>
-
         <View style={styles.formContainer}>
-
           <View style={styles.TopInputsContainer}>
               <View style={styles.avatar}></View>
               <View style={styles.TopInputs}>

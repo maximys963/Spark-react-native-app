@@ -38,15 +38,36 @@ export default class Login extends ValidationComponent{
       SignEmail:{required:true, email: true},
       SignPassword:{required: true, minlength:5}
     });
+      let emErr = this.isFieldInError('SignEmail');
+      let psErr = this.isFieldInError("SignPassword");
+      if (emErr){
+          console.log('its email erroe');
+
+          this.refs.SignEmail.props.style.color = this.state.ErrorEmailColor;
+          // console.log(`element = ${this.refs.SignEmail.props}`);
+          for (let key1 in this.refs.SignEmail.props) {
+            console.log(key1);
+          }
+
+
+
+      }else if(psErr){
+          // console.log('its password error');
+      }
     this.setState({
       validationDone: true,
-    })
-    console.log("validationDone after" + this.state.validationDone)
-    console.log(this.isFieldInError('SignEmail'));
-    console.log(this.isFieldInError("SignPassword"));
-    console.log(this.state.SignEmail);
-    console.log(this.state.SignPassword);
-  }
+    });
+    // console.log("validationDone after" + this.state.validationDone);
+    // console.log(this.isFieldInError('SignEmail'));
+    // console.log(this.isFieldInError("SignPassword"));
+    // console.log(this.state.SignEmail);
+    // console.log(this.state.SignPassword);
+
+
+
+  };
+
+
 
   render(){
   var {navigate} = this.props.navigation;
@@ -60,29 +81,23 @@ export default class Login extends ValidationComponent{
         </View>
         <View style={styles.formContainer}>
 
-          <View  style={styles.TextInputStyle} >
+          <View  style={styles.TextInputStyle} ref="email1">
           <Icon style={styles.Icons} name="email" color='rgba(255,255,255, 0.9)' size={30} />
 
           <TextInput
-            style={{  flexDirection: 'row',
-              backgroundColor: 'rgba(46, 204, 113, 0.5)',
-              height: 40,
-              marginBottom: 10,
-              width: 260,
-              borderRadius: 20,
-              paddingLeft:5,}}
+            style={styles.input}
             placeholderTextColor = 'rgba(255,255,255, 0.9)'
             placeholder="імейл адреса"
             keyboardType="email-address"
             underlineColorAndroid="rgba(0,0,0,0)"
-            ref='SignEmail'
+            ref="SignEmail"
             onChangeText={(SignEmail) => this.setState({SignEmail})}
             />
 
 
 
           </View>
-        <View style={styles.TextInputStyle}>
+        <View style={styles.TextInputStyle} >
 
            <Icon style={styles.Icons} name="fingerprint" color='rgba(255,255,255, 0.9)' size={30} />
 
@@ -92,13 +107,7 @@ export default class Login extends ValidationComponent{
             placeholderTextColor = 'rgba(255,255,255, 0.9)'
             underlineColorAndroid="rgba(0,0,0,0)"
             ref='SignPassword'
-            style={{  flexDirection: 'row',
-              backgroundColor: 'rgba(46, 204, 113, 0.5)',
-              height: 40,
-              marginBottom: 10,
-              width: 260,
-              borderRadius: 20,
-              paddingLeft:5,}}
+            style={styles.input}
               onChangeText={(SignPassword) => this.setState({SignPassword})}
 
            />
@@ -133,6 +142,15 @@ const styles  = StyleSheet.create({
   Icons:{
 
   },
+    TextInputStyle:{
+        flexDirection: 'row',
+        backgroundColor: 'rgba(46, 204, 113, 0.5)',
+        height: 40,
+        marginBottom: 10,
+        width: 260,
+        borderRadius: 20,
+        paddingLeft:5,
+    },
   searchSection: {
     flex: 1,
     flexDirection: 'row',
